@@ -253,3 +253,42 @@ D:\free lance\ficom_fw45\ficom\ficom\obj\Debug\LCMS.csproj.GenerateResource.Cach
 D:\free lance\ficom_fw45\ficom\ficom\obj\Debug\LCMS.exe
 D:\free lance\ficom_fw45\ficom\ficom\obj\Debug\LCMS.pdb
 D:\free lance\ficom_fw45\ficom\ficom\obj\Debug\LCMS.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\LCMS.exe.config
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\LCMS.exe
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\LCMS.pdb
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\EntityFramework.SqlServerCompact.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\NetOffice.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\OfficeApi.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\System.Data.SqlServerCe.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\VBIDEApi.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\WordApi.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\EntityFramework.SqlServerCompact.xml
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\NetOffice.xml
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\OfficeApi.xml
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\VBIDEApi.xml
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\WordApi.xml
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\Interop.UMCBILib.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\bin\Debug\AxInterop.UMCBILib.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\Interop.UMCBILib.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\AxInterop.UMCBILib.dll
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.csproj.ResolveComReference.cache
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.CustomMessageBox.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.Lang.LangZn.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.Lang.LangEn.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.LoginForm.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.MainForm.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.OutputWord.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.Properties.Resources.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.DummyScreen.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.ScriptEditor.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.SettingForm.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.SplashScreen.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.TestConnection.resources
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.csproj.GenerateResource.Cache
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.exe
+\\Mac\Home\Documents\private_github\lcms_enhance\ficom\ficom\obj\Debug\LCMS.pdb

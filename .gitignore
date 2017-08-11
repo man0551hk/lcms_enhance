@@ -1,2 +1,4 @@
-release/*
-debug/*
+bin/
+Debug/
+Release/
+obj/
