@@ -1389,10 +1389,10 @@ namespace LCMS
                     bkWorker.RunWorkerCompleted += WarmUpWork_RunWorkerCompleted;
 
                     bkWorker.RunWorkerAsync();
-                    bkWorker.WorkerReportsProgress = true;//啟動回報進度
+                    bkWorker.WorkerReportsProgress = true;
                     bk_pbr.Value = 0;   
                     bk_pbr.Maximum = Convert.ToInt32(GlobalFunc.warmupTime * 60) + GlobalFunc.bufferTime;//ProgressBar上限
-                    bk_pbr.Minimum = 0;//ProgressBar下限*/
+                    bk_pbr.Minimum = 0;
 
                     #endregion
                 }                

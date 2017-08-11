@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DualScript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WarmUpBegin></WarmUpBegin>
+  <WarmUpEnd></WarmUpEnd>
+  <WarmUpChn></WarmUpChn>
+  <WarmUpData></WarmUpData>
+  <BackgroundBegin></BackgroundBegin>
+  <BackgroundEnd></BackgroundEnd>
+  <BackgroundData></BackgroundData>
+  <Roi4></Roi4>
+  <Roi5></Roi5>
+  <Roi6></Roi6>
+  <CalibrationBegin></CalibrationBegin>
+  <CalibrationEnd></CalibrationEnd>
+  <CalibrationUpdate></CalibrationUpdate>
+  <CalibrationData></CalibrationData>
+  <MeasureBegin></MeasureBegin>
+  <MeasureEnd></MeasureEnd>
+  <MeasureData></MeasureData>
+</DualScript>

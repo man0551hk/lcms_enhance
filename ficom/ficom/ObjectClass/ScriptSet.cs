@@ -10,7 +10,7 @@ namespace LCMS
     {
         private string warmUpBegin = "";
         private string warmUpEnd = "";
-        private string warmUpRoi = "";  
+        private string warmUpChn = "";
         private string warmUpData = "";
         private string backgroundBegin = "";
         private string backgroundEnd = "";
@@ -35,10 +35,10 @@ namespace LCMS
             set { warmUpEnd = value; }
             get { return warmUpEnd; }
         }
-        public string WarmUpRoi
+        public string WarmUpChni
         {
-            set { warmUpRoi = value; }
-            get { return warmUpRoi; }
+            set { WarmUpChni = value; }
+            get { return WarmUpChni; }
         }
         public string WarmUpData
         {
@@ -114,14 +114,14 @@ namespace LCMS
         {            
         }
 
-        public ScriptSet(string warmUpBegin, string warmUpEnd, string warmUpRoi, string warmUpData, string backgroundBegin, 
+        public ScriptSet(string warmUpBegin, string warmUpEnd, string WarmUpChni, string warmUpData, string backgroundBegin, 
                         string backgroundEnd, string backgroundData, string roi4, string roi5, string roi6, string calibrationBegin, 
                         string calibrationEnd, string calibrationUpdate, string calibrationData, string measureBegin, 
                         string measureEnd, string measureData)
         {
             this.warmUpBegin = warmUpBegin;
             this.warmUpEnd = warmUpEnd;
-            this.warmUpRoi = warmUpRoi;        
+            this.WarmUpChni = WarmUpChni;        
             this.warmUpData = warmUpData;
             this.backgroundBegin = backgroundBegin;
             this.backgroundEnd = backgroundEnd;          

@@ -61,8 +61,6 @@ namespace LCMS
 
                 noticeLabel.Invoke(new MethodInvoker(delegate { noticeLabel.Text = GlobalFunc.rm.GetString("loadBasicXML"); }));
 
-
-
                 countTime += 50;
                 if (GlobalFunc.basicSetting.GetTemp.ToLower() == "on")
                 {
@@ -73,8 +71,8 @@ namespace LCMS
                     GlobalFunc.getTemp = false;
                 }
                 countTime += 50;
-                GlobalFunc.intIOAddress = Convert.ToInt32(GlobalFunc.basicSetting.IoAddress, 16);
-                countTime += 50;
+
+
                 XmlSerializer deserializer2 = new XmlSerializer(typeof(ScriptSet));
                 TextReader textReader2 = new StreamReader(@Directory.GetCurrentDirectory() + @"\xml\DualScript.xml");
                 GlobalFunc.dualScriptSet = (ScriptSet)deserializer2.Deserialize(textReader2);
@@ -91,11 +89,13 @@ namespace LCMS
                 TextReader textReader4 = new StreamReader(@Directory.GetCurrentDirectory() + @"\xml\BottomScript.xml");
                 GlobalFunc.bottomScriptSet = (ScriptSet)deserializer4.Deserialize(textReader4);
                 textReader4.Close();
+                countTime += 50;
 
                 GlobalFunc.LoadIsotopXML();
 
                 if (GlobalFunc.basicSetting.InsalledIO.ToLower() == "true")
                 {
+                    GlobalFunc.intIOAddress = Convert.ToInt32(GlobalFunc.basicSetting.IoAddress, 16);
                     try
                     {
                         //reset to only led #1 on
@@ -105,6 +105,30 @@ namespace LCMS
                     {
                         MessageBox.Show("IO Address not found");
                     }
+
+                    #region check inpot32.dll is existed
+                    noticeLabel.Invoke(new MethodInvoker(delegate { noticeLabel.Text = GlobalFunc.rm.GetString("checkIO"); }));
+                    if (!File.Exists(@"C:\Windows\System32\inpout32.dll"))
+                    {
+                        if (File.Exists(@Directory.GetCurrentDirectory() + @"\inpout32.dll"))
+                        {
+                            noticeLabel.Invoke(new MethodInvoker(delegate
+                            {
+                                MessageBox.Show(@"Please copy inpout32.dll from C:\LCMS to C:\Windows\System32");
+                            }));
+                        }
+                        else
+                        {
+                            noticeLabel.Invoke(new MethodInvoker(delegate
+                            {
+                                MessageBox.Show("Can't find inpout32.dll in program directory");
+                            }));
+
+                        }
+                    }
+                    countTime += 50;
+                    Thread.Sleep(1000);
+                    #endregion
                 }
                 countTime += 50;
                 Thread.Sleep(1000);
@@ -113,30 +137,6 @@ namespace LCMS
             {
                 MessageBox.Show(ex.Message);
             }
-            #endregion
-
-            #region check inpot32.dll is existed
-            noticeLabel.Invoke(new MethodInvoker(delegate { noticeLabel.Text = GlobalFunc.rm.GetString("checkIO"); }));
-            if (!File.Exists(@"C:\Windows\System32\inpout32.dll"))
-            {
-                if (File.Exists(@Directory.GetCurrentDirectory() + @"\inpout32.dll"))
-                {
-                    noticeLabel.Invoke(new MethodInvoker(delegate
-                    {
-                        MessageBox.Show(@"Please copy inpout32.dll from C:\LCMS to C:\Windows\System32");
-                    }));
-                }
-                else
-                {
-                    noticeLabel.Invoke(new MethodInvoker(delegate
-                    {
-                        MessageBox.Show("Can't find inpout32.dll in program directory");
-                    }));
-                    
-                }
-            }
-            countTime += 50;
-            Thread.Sleep(1000);
             #endregion
 
             #region check exe path is correct
