@@ -1,0 +1,109 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : Begin_Det_Bgd.Job
+REM   
+REM	Description : Background measurement for Detectors 1 and 2
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.4
+REM
+REM	Date : 26 Dec. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Call this job file after Warmup cycle has done is preferred
+REM	That is the K40 peak is within 900 +/- 10 channels
+REM
+REM	Both gain & zero stabilizers are enabled and set at 900 and width of 101 channels	
+REM
+REM	DET1_ROI5.ROI & DET2_ROI5.ROI are using for ROI reports ( default )
+REM
+REM	Bgd measuring time is at least 900 sec. or twice sample measuring time	
+REM
+REM	Bgd Spectra store at MCA memory after counting
+REM	Bgd spectra are saved as :
+REM	C:\LCMS\Spectra\DET1_Bgd.Chn and C:\LCMS\Spectra\DET2_Bgd.Chn
+REM
+REM	ROI reports ( ASCII ) will be generated after elapsed of bgd counting time
+REM	Bgd ROI reports are saved as : C:\LCMS\Data\DET1_Bgd.Dat & C:\LCMS\Data\DET2_Bgd.Dat
+REM
+REM	--------------------------------------------------------
+
+
+REM Close all buffers if any
+
+CLOSEBUFFERS
+
+
+REM	------------------------------------------------------
+REM 	Set ZOOM -1 for minimize Maestro window after debug
+REM 	------------------------------------------------------
+
+REM	----------------------------------------------------------
+REM	Stop, clear MCA and preset live time for detectorS 1 & 2
+REM	----------------------------------------------------------
+
+
+REM ----------------------------------------------------------
+SET_DETECTOR 1
+STOP
+CLEAR
+SET_PRESET_CLEAR
+
+REM ** modify for different counting time in seconds
+SET_PRESET_LIVE 78
+
+REM ** modify for different ROI file of Det1
+RECALL_ROI "C:\LCMS\Roi\DET1_ROI5.Roi"
+DESCRIBE_SAMPLE "Detector 1 Background"
+
+REM ----------------------------------------------------------
+SET_DETECTOR 2
+STOP
+CLEAR
+SET_PRESET_CLEAR
+
+REM ** modify for different counting time in seconds
+SET_PRESET_LIVE 78
+
+REM ** modify for different ROI file of Det2
+RECALL_ROI "C:\LCMS\Roi\DET2_ROI5.Roi"
+DESCRIBE_SAMPLE "Detector 2 Background"
+
+REM ASK_CONFIRM "Put KCl beaker reference in front of detector box then press OK !"
+
+REM	------------------
+REM	Current detector 2
+REM	------------------ 
+START
+
+SET_DETECTOR 1
+START
+
+WAIT 2
+WAIT
+
+
+REM REM Current Detector is 1
+REM DESCRIBE_SAMPLE "Detector 1 Background"
+REM SAVE "C:\LCMS\SPECTRA\DET1_Bgd.Chn"
+REM WAIT
+REM REPORT "C:\LCMS\DATA\DET1_Bgd.Dat"
+REM WAIT
+
+REM SET_DETECTOR 2
+REM DESCRIBE_SAMPLE "Detector 2 Background"
+REM SAVE "C:\LCMS\SPECTRA\DET2_Bgd.Chn"
+REM WAIT
+REM REPORT "C:\LCMS\DATA\DET2_Bgd.Dat"
+REM WAIT
+
+
+REM quit Maestro and return to calling program 
+REM QUIT
+
+REM * * * * Job file end * * * *
+

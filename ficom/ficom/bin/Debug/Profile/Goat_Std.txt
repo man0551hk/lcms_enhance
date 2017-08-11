@@ -1,0 +1,84 @@
+Profile Name:Goat_Std
+Detector:Dual
+Location:文錦渡  
+Alarm Type:AL
+Quantity of Isotope:5
+Live Time:18.0
+Date:1/30/2015 8:03:53 PM
+Roi Path1:C:\LCMS\Roi\DET1_ROI5A.Roi
+Roi Path2:C:\LCMS\Roi\DET2_ROI5A.Roi
+No. of Region:1
+Background Top CPS:61.44,33.39,18.5,11.39,16.28,141
+Background Bottom CPS:66.22,37.33,17.89,11.56,15.22,148.22
+
+Isotope Sequence:
+Roi#1:Iodine-131
+Activity:100
+Ref Datetime:2015-1-18 12:41
+Measure Time:0.1
+DIL:1
+AL:100
+AL%:1
+Top CPS:67.17,44.67,34.17,15.83,17
+Bottom CPS:77.33,45.33,37.5,18.5,20
+
+Roi#2:Ru-103
+Activity:100
+Ref Datetime:2015-1-18 12:41
+Measure Time:0.1
+DIL:1
+AL:100
+AL%:1
+Top CPS:67,47.17,37.67,16.67,19.5
+Bottom CPS:67.83,43.67,36.33,15.5,16.83
+
+Roi#3:Cs-137
+Activity:100
+Ref Datetime:2015-1-18 12:41
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:1
+Top CPS:63.67,41.67,33.83,17.17,21
+Bottom CPS:72.67,44.5,32.5,15.83,15.5
+
+Roi#4:Cs-134
+Activity:100
+Ref Datetime:2015-1-18 12:41
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:100
+Top CPS:75.67,42.67,32.33,18.5,18.83
+Bottom CPS:66.33,48,33,18.5,17
+
+Roi#5:K-40
+Activity:100
+Ref Datetime:2015-1-18 12:41
+Measure Time:0.1
+DIL:1
+AL:100
+AL%:1
+Top CPS:67.33,49.17,33.5,19.67,20.17
+Bottom CPS:67.33,45.67,39.67,18.83,14.17
+
+Matrix Top:
+1,1,1,1,1,
+1,1,1,1,1,
+1,1,1,1,1,
+1,1,1,1,1,
+1,1,1,1,1,
+
+Matrix Bottom:
+1,1,1,1,1,
+1,1,1,1,1,
+1,1,1,1,1,
+1,1,1,1,1,
+1,1,1,1,1,
+
+Matrix Dual:
+1,1,1,1,1,
+1,1,1,1,1,
+1,1,1,1,1,
+1,1,1,1,1,
+1,1,1,1,1,

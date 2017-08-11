@@ -1,0 +1,53 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : End_Det_Warmup.Job
+REM   
+REM	Description : Ending Detector Warmup for both detectors
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.1
+REM
+REM	Date : 26 Dec. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	This job file is called after Begin_Det1_Warmup.Job has been done.
+REM
+REM	Do nothing for simplicity
+REM	--------------------------------------------------------
+
+REM Close all buffers if any
+
+REM Add ZOOM -1 for minimizing Maestro window after debug
+
+CLOSEBUFFERS
+CLOSEMCBS
+
+	REM using Looping method, loop = 1 for testing
+	LOOP 2
+
+	SET_Detector $(Loop1)
+	STOP
+
+	DESCRIBE_SAMPLE "Detector $(Loop1) Warmup"
+	SAVE "C:\LCMS\SPECTRA\DET$(Loop1)_Warmup.Chn"
+	WAIT
+
+	REM ROI file for det must be loaded before calling REPORT
+	REPORT "C:\LCMS\Data\DET$(Loop1)_Warmup.Dat"
+	WAIT
+
+	REM Looping for next ( det2 ) detector
+	END_LOOP
+
+
+REM quit Maestro and return to calling program 
+
+QUIT
+
+
+REM * * * * END * * * *
+

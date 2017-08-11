@@ -1,0 +1,98 @@
+Profile Name:Cattle_5
+Detector:Dual
+Location:Sheung Shui Slaughterhouse
+Alarm Type:AL
+Roi Path:
+Quantity of Isotope:6
+Live Time:18.0
+Date:1/29/2015 1:17:45 PM
+Roi Path1:
+Roi Path2:
+No. of Region:1
+Background Top CPS:0,0,0,0,0,0,0
+Background Bottom CPS:0,0,0,0,0,0,0
+
+Isotope Sequence:
+Roi#1:Iodine-131
+Activity:100
+Ref Datetime:2015-1-26 22:14
+Measure Time:0.1
+DIL:10
+AL:1
+AL%:1
+Top CPS:0,0,0,0,0,0
+Bottom CPS:0,0,0,0,0,0
+
+Roi#2:Ru-103
+Activity:100
+Ref Datetime:2015-1-26 22:14
+Measure Time:0.1
+DIL:20
+AL:2
+AL%:2
+Top CPS:0,0,0,0,0,0
+Bottom CPS:0,0,0,0,0,0
+
+Roi#3:Cs-137
+Activity:100
+Ref Datetime:2015-1-26 22:14
+Measure Time:0.1
+DIL:30
+AL:3
+AL%:3
+Top CPS:0,0,0,0,0,0
+Bottom CPS:0,0,0,0,0,0
+
+Roi#4:Cs-134
+Activity:100
+Ref Datetime:2015-1-26 22:14
+Measure Time:0.1
+DIL:40
+AL:4
+AL%:4
+Top CPS:0,0,0,0,0,0
+Bottom CPS:0,0,0,0,0,0
+
+Roi#5:Co-60
+Activity:100
+Ref Datetime:2015-1-26 22:14
+Measure Time:0.1
+DIL:50
+AL:5
+AL%:5
+Top CPS:0,0,0,0,0,0
+Bottom CPS:0,0,0,0,0,0
+
+Roi#6:K-40
+Activity:100
+Ref Datetime:2015-1-26 22:14
+Measure Time:0.1
+DIL:60
+AL:6
+AL%:6
+Top CPS:0,0,0,0,0,0
+Bottom CPS:0,0,0,0,0,0
+
+Matrix Top:
+1,0,0,0,0,0,
+0,1,0,0,0,0,
+0,0,1,0,0,0,
+0,0,0,1,0,0,
+0,0,0,1,0,0,
+0,0,0,0,0,1,
+
+Matrix Bottom:
+1,0,0,0,0,0,
+0,1,0,0,0,0,
+0,0,1,0,0,0,
+0,0,0,1,0,0,
+0,0,0,1,0,0,
+0,0,0,0,0,1,
+
+Matrix Dual:
+1,0,0,0,0,0,
+0,1,0,0,0,0,
+0,0,1,0,0,0,
+0,0,0,1,0,0,
+0,0,0,1,0,0,
+0,0,0,0,0,1,

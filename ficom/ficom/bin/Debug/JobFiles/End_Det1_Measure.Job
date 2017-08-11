@@ -1,0 +1,47 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : End_Det1_Measure.Job
+REM   
+REM	Description : Ending Detector measurement for detector 1
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.2
+REM
+REM	Date : 26 Dec. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	This job file is called after Begin_Det1_Measure.Job has been done.
+REM
+REM
+REM	--------------------------------------------------------
+
+REM Close all buffers if any
+
+REM Add ZOOM -1 for minimizing Maestro window after debug
+
+CLOSEBUFFERS
+
+CLOSEMCBS
+
+SET_DETECTOR 1
+STOP
+
+DESCRIBE_SAMPLE "Detector 1 Measurement"
+SAVE "C:\LCMS\SPECTRA\DET1_Measure.Chn"
+WAIT
+
+REM ROI file for det1 must be loaded before calling REPORT
+REPORT "C:\LCMS\Data\DET1_Measure.Dat"
+WAIT
+
+
+REM quit Maestro and return to calling program 
+QUIT
+
+REM * * * * Job file end * * * *
+
+

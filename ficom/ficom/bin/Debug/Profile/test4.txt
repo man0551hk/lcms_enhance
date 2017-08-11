@@ -1,0 +1,60 @@
+Profile Name:test4
+Detector:Top
+Location:MKT4444
+Alarm Type:DIL
+Quantity of Isotope:4
+Live Time:6.0
+Date:1/11/2015 11:07:06 AM
+No. of Region:1
+Background Top CPS:5.33,21.33,32.83,59.67,119.16
+Background Bottom CPS:
+
+Isotope Sequence:
+Roi#1:I-131
+Activity:3
+Ref Datetime:2015-1-11 11:6
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:1
+Top CPS:8.83,17.5,33.83,66
+Bottom CPS:
+
+Roi#2:
+Activity:4
+Ref Datetime:2015-1-11 11:6
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:1
+Top CPS:8,19.5,32.33,61.67
+Bottom CPS:
+
+Roi#3:
+Activity:5
+Ref Datetime:2015-1-11 11:6
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:1
+Top CPS:7,20,32.5,58.5
+Bottom CPS:
+
+Roi#4:
+Activity:6
+Ref Datetime:2015-1-11 11:6
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:1
+Top CPS:6.33,20.83,34.33,55.67
+Bottom CPS:
+
+Matrix Top:
+1.16808052616108,0.66774204043472,0.334400744492097,0.166833405108798,
+-1.27821383291341,-0.457665892882224,-0.266319155793107,-0.0834167025543989,
+0.333737293188879,-0.125045325924105,-0.0660791890313722,0.250250107663197,
+2.1125570658856,0.50018130369642,-0.23428076111123,-0.667333620435191,
+
+Matrix Bottom:
+Matrix Dual:

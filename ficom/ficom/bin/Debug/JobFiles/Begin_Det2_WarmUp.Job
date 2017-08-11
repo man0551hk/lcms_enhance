@@ -1,0 +1,101 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : Begin_Det2_WarmUp.Job
+REM   
+REM	Description : Auto K40 peak adjustments
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.2
+REM
+REM	Date : 26 Dec. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Call this job file before background and sample measurements
+REM
+REM	It is to set K40 peak at 900 +/- 10 channels by using KCl ref.
+REM
+REM	Both gain & zero stabilizers are enabled and set at 900 with width of 101 channels
+REM
+REM	Cycle time is 300 seconds and repeats if peak outsides 900 +/- 10.
+REM
+REM	Quit program after counting begins
+REM
+REM	Calling End_Det2_Warmup.Job for completing Warmup cycle
+REM
+REM	--------------------------------------------------------
+
+REM Close all buffers if any
+
+REM Add ZOOM -1 for minimizing Maestro window after debug
+
+CLOSEBUFFERS
+
+REM	-----------
+REM	Detector 2
+REM	-----------
+
+SET_DETECTOR 2
+STOP
+CLEAR
+SET_PRESET_CLEAR
+
+REM modifiy below command for different counting time in seconds
+SET_PRESET_LIVE 30
+
+REM	------------------------------------------------
+REM	Turn on high voltage & waits 5 Sec to stabilize	
+REM	------------------------------------------------
+SEND_MESSAGE "ENAB_HV"
+REM WAIT 5
+
+REM	-----------------------------------------------------------------------
+REM	Set both Gain & zero Stabilizers peak at 900 with width of 101 channels
+REM	Set Gain Channel and Width before Enable Stabilization		
+REM	Zero Stabilizer will be reset; so it needs to enable before quiting
+REM	-----------------------------------------------------------------------
+
+DESCRIBE_SAMPLE "Detector 2 Warmup"
+SEND_MESSAGE "DISA_ZERO_STABILIZATION"
+SEND_MESSAGE "INIT_ZERO_STABILIZATION"
+SEND_MESSAGE "DISABLE_GAIN_STAB"
+SEND_MESSAGE "SET_GAIN_CHAN 900"
+SEND_MESSAGE "SET_GAIN_WIDTH 101"
+SEND_MESSAGE "ENABLE_GAIN_STAB"
+SEND_MESSAGE "SET_ZERO_CHANNEL 900"
+SEND_MESSAGE "SET_ZERO_WIDTH 101"
+
+REM	---------------------------------------------------------
+REM	Put KCl reference next to detector box
+REM	Run warmup cycle for 5 min				
+REM	Enable both gain and zero stabilizers after warmup cycle		
+REM	Save background spectrum LCMS_warmup.spc
+REM	---------------------------------------------------------
+
+
+ASK_CONFIRM "Put KCl beaker reference in front of detector box then press OK !"
+
+START
+
+WAIT 2
+REM WAIT
+
+
+REM REM Current Detector is 2
+REM DESCRIBE_SAMPLE "Detector 2 Warmup"
+REM SAVE "C:\LCMS\SPECTRA\DET2_Warmup.Chn"
+REM WAIT
+REM REPORT "C:\LCMS\Data\DET2_Warmup.Dat"
+REM WAIT
+
+REM quit Maestro and return to calling program 
+
+QUIT
+
+
+REM * * * * END * * * *
+
+

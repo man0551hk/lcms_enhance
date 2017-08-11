@@ -1,0 +1,155 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : Begin_Det2_Truck_Cal.Job
+REM   
+REM	Description : Calibration of Detector 2 for Truck livestock geometry
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.0
+REM
+REM	Date : 26 Dec. 2014
+REM
+REM     -------------------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Detector 2 calibration for truck livestock geometry
+REM
+REM	5 nuclides ( default ); i.e. n = 5
+REM
+REM	DET2_ROI5.ROI is using for ROI reports ( default )
+REM
+REM	Calibration time per nuclide is 900 seconds default ( 5 secs for testing )
+REM
+REM	Each nuclide is calibrated for 9 mapped regions in truck
+REM
+REM	If measuring time is 900 sec., then region measuring time is 900/9 = 100 sec.
+REM
+REM	Spectra store at MCA memory after counting
+REM
+REM	Temporary spectrum is saved as C:\LCMS\Spectra\DET2_TMP.chn
+REM
+REM	Saved spectrum C:\LCMS\Spectra\DET2_Truck_Cal_n.Chn; where n is no. of nuclide
+REM
+REM	ROI report ( ASCII ) will be generated after elapsed of measuring time
+REM
+REM	ROI report saved as : C:\LCMS\Data\DET2_Truck_Cal_n.Dat; where n is no. of nuclide.
+REM	
+REM	Livetime shown in ROI report is for 1 region; total livetime is 9 times this value
+REM
+REM	--------------------------------------------------------------
+
+
+REM Close all buffers if any
+
+CLOSEBUFFERS
+
+
+REM	------------------------------------------------------
+REM 	Set ZOOM -1 for minimize Maestro window after debug
+REM 	------------------------------------------------------
+
+REM	----------------------------------------------------------
+REM	Stop, clear MCA and preset live time for detector 2
+REM	----------------------------------------------------------
+
+
+REM ----------------------------------------------------------
+SET_DETECTOR 2
+STOP
+CLEAR
+
+REM ** modify below command for different ROI file of Det2
+RECALL_ROI "C:\LCMS\ROI\DET2_ROI5.ROI"
+
+SET_PRESET_CLEAR
+REM ** modify below command for counting time in seconds per region
+SET_PRESET_LIVE 5
+
+
+
+	REM ** modify loop value for total number of nuclides for calibration
+	Loop 3
+	
+	REM create empty spectrum for saving accumlated spectra of Det2 at different regions	
+	SET_DETECTOR 2
+	CLEAR	
+	SAVE "C:\LCMS\Spectra\DET2_TMP.Chn"
+
+
+
+	REM ***************** Beginning loop for nuclides ******************
+
+	ASK_CONFIRM "Get Ready with Calibration Standard < $(Loop1) >, then press OK"
+
+
+		REM Loop value for 9 regions, 3 for testing
+		Loop 2
+
+		REM *********************** Begining loop for 9 regions ******************
+
+		SET_DETECTOR 2
+		DESCRIBE_SAMPLE "Detector 2 Region $(Loop1)"
+		CLEAR
+
+		ASK_CONFIRM "Put Calibration Standard in Region [ $(Loop1) ], then press OK"
+
+		SET_DETECTOR 2
+		START
+
+		WAIT 2
+		WAIT
+
+
+		REM ----------------------------------------------
+		REM Updatng tmp spectrum at each region
+		REM ----------------------------------------------
+
+		SET_DETECTOR 2
+		REM SAVE "C:\LCMS\Spectra\DET2_Truck_Cal_R$(Loop1).Chn"
+
+		FILL_BUFFER
+		SET_BUFFER
+		REM Strip -1 means addition
+		STRIP -1,"C:\LCMS\Spectra\DET2_TMP.CHN"
+		REM ASK_CONFIRM "Check buffer content"
+		SAVE "C:\LCMS\Spectra\Det2_Tmp.Chn"
+
+
+		REM Inner Loop for 9 regions
+		END_LOOP
+
+		REM *********************** Ending of loop for 9 regions ******************
+
+
+
+	REM -----------------------------------------
+	REM Saving spectra and generating ROI Reports
+	REM -----------------------------------------
+
+	REM ASK_CONFIRM "Before recalling temp spectrum"
+	RECALL "C:\LCMS\SPECTRA\DET2_TMP.Chn"
+	SET_BUFFER
+	DESCRIBE_SAMPLE "Detector 2 Nuclide $(Loop1)"
+	SAVE "C:\LCMS\SPECTRA\DET2_Truck_Cal_$(Loop1).Chn"
+	WAIT
+
+	REM ** modify below command for different ROI file of Det2
+	RECALL_ROI "C:\LCMS\ROI\DET2_ROI5.ROI"
+	REPORT "C:\LCMS\Data\DET2_Truck_Cal_$(Loop1).Dat"
+	WAIT
+
+
+	REM Outer Loop for number of nuclides
+	End_Loop
+
+
+ASK_CONFIRM "Calibration Done O.K. !"
+
+
+REM quit Maestro and return to calling program 
+REM QUIT
+
+REM * * * * Job file end * * * *
+

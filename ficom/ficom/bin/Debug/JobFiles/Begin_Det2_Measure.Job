@@ -1,0 +1,77 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : Begin_Det2_Measure.Job
+REM   
+REM	Description : Measurement for Detector 2
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.4
+REM
+REM	Date : 26 Dec. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Detector 2 Measurement
+REM
+REM	DET2_ROI5.ROI is using for ROI report ( default )
+REM
+REM	Measuring time is 60 seconds default ( 10 seconds for testing )
+REM
+REM	Spectrum storea at MCA memory after counting
+REM
+REM	C:\LCMS\Spectra\DET2_Measure.Chn
+REM
+REM	ROI report ( ASCII ) will be generated after elapsed of measuring time
+REM	ROI report saved as : C:\LCMS\Data\DET2_Measure.Dat
+REM
+REM	--------------------------------------------------------
+
+
+REM Close all buffers if any
+
+CLOSEBUFFERS
+
+
+REM	------------------------------------------------------
+REM 	Set ZOOM -1 for minimize Maestro window after debug
+REM 	------------------------------------------------------
+
+REM	------------------------------------------------------
+REM	Stop, clear MCA and preset live time for detector 2
+REM	------------------------------------------------------
+
+
+REM ----------------------------------------------------------
+SET_DETECTOR 2
+STOP
+CLEAR
+SET_PRESET_CLEAR
+
+REM ** modify counting time in seconds
+SET_PRESET_LIVE 10
+
+REM ** modify for different ROI file of Det2
+RECALL_ROI "C:\LCMS\ROI\DET2_ROI5.ROI"
+
+DESCRIBE_SAMPLE "Detector 2 Measurement"
+
+START
+
+WAIT 2
+REM WAIT
+
+REM SAVE "C:\LCMS\SPECTRA\DET2_Measure.Chn"
+REM WAIT
+REM REPORT "C:\LCMS\Data\DET2_Measure.Dat"
+REM WAIT
+
+
+REM quit Maestro and return to calling program 
+
+QUIT
+
+REM * * * * Job file end * * * *
+

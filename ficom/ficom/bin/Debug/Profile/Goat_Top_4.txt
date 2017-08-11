@@ -1,0 +1,73 @@
+Profile Name:Goat_Top_4
+Detector:Top
+Location:Lok Ma Chau
+Alarm Type:AL
+Quantity of Isotope:4
+Live Time:30.0
+Date:1/26/2015 10:26:36 PM
+Roi Path1:
+Roi Path2:
+No. of Region:1
+Background Top CPS:66.1,35.43,17,17.13,135.66
+Background Bottom CPS:69.6,42.37,34.87,17.17,16.43,16.8,197.24
+
+Isotope Sequence:
+Roi#1:Iodine-131
+Activity:100
+Ref Datetime:2015-1-26 22:25
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:1
+Top CPS:57.83,34.83,17.5,16.33
+Bottom CPS:
+
+Roi#2:Cs-137
+Activity:100
+Ref Datetime:2015-1-26 22:25
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:1
+Top CPS:66.67,34.33,18.33,19
+Bottom CPS:
+
+Roi#3:Cs-134
+Activity:100
+Ref Datetime:2015-1-26 22:25
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:1
+Top CPS:63.67,34.83,16.5,15.83
+Bottom CPS:
+
+Roi#4:K-40
+Activity:100
+Ref Datetime:2015-1-26 22:25
+Measure Time:0.1
+DIL:1
+AL:1
+AL%:1
+Top CPS:66,36.33,19.5,14.83
+Bottom CPS:
+
+Matrix Top:
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+
+
+Matrix Bottom:
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+
+
+Matrix Dual:
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,

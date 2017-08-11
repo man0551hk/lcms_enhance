@@ -1,0 +1,100 @@
+Profile Name:Cow_Truck_Co60
+Detector:Dual
+Location:Lok Ma Chau
+Alarm Type:AL
+Quantity of Isotope:6
+Live Time:30.0
+Date:1/24/2015 2:29:48 PM
+Roi Path1:
+Roi Path2:
+No. of Region:1
+Background Top CPS:64.8,42.8,33.87,18.37,14.77,18.73,193.34
+Background Bottom CPS:69.3,45.03,39.57,18.53,16.27,14.77,203.47
+
+Isotope Sequence:
+Roi#1:Iodine-131
+Activity:100
+Ref Datetime:2015-1-22 21:40
+Measure Time:0.1
+DIL:1
+AL:11
+AL%:1
+Top CPS:65.67,41,35.17,19,14.5,19.83
+Bottom CPS:67,46.33,33.17,20.17,12.17,15.67
+
+Roi#2:Ru-103
+Activity:200
+Ref Datetime:2015-1-22 21:40
+Measure Time:0.1
+DIL:1
+AL:22
+AL%:1
+Top CPS:67,42.67,33.33,18.33,16,17.67
+Bottom CPS:67.17,42.5,40,17.33,15.83,18.33
+
+Roi#3:Cs-137
+Activity:300
+Ref Datetime:2015-1-22 21:40
+Measure Time:0.1
+DIL:1
+AL:33
+AL%:1
+Top CPS:66.83,44.83,31.5,14.67,17,18.33
+Bottom CPS:66.67,45.33,41.83,17,15.17,16.17
+
+Roi#4:Cs-134
+Activity:400
+Ref Datetime:2015-1-22 21:40
+Measure Time:0.1
+DIL:1
+AL:44
+AL%:1
+Top CPS:70,41.33,36.33,17.67,20,16.5
+Bottom CPS:74.33,41.67,42,20.83,17.67,17.67
+
+Roi#5:Co-60
+Activity:500
+Ref Datetime:2015-1-22 21:40
+Measure Time:0.1
+DIL:1
+AL:55
+AL%:1
+Top CPS:65.33,47.5,32.17,18.17,15.67,16.83
+Bottom CPS:67.17,48,37.33,17.33,16.67,15
+
+Roi#6:K-40
+Activity:600
+Ref Datetime:2015-1-22 21:40
+Measure Time:0.1
+DIL:1
+AL:66
+AL%:1
+Top CPS:62.83,44.5,33.83,19.17,17.67,16.5
+Bottom CPS:74,43.17,31.83,18,16.83,16.67
+
+Matrix Top:
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+
+
+Matrix Bottom:
+
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+
+Matrix Dual:
+
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,
+1,1,1,1,1,1,

@@ -1,0 +1,96 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : Begin_Det1_Single_Cal.Job
+REM   
+REM	Description : Calibration of Detector 1 for single livestock geometry
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.1
+REM
+REM	Date : 25 Dec. 2014
+REM
+REM     -------------------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Detector 1 Calibration for single livestock
+REM
+REM	5 nuclides ( default ); i.e. n = 5 
+REM
+REM	DET1_ROI5.ROI is using for ROI report ( default )
+REM
+REM	Calibration time per nuclide is 300 seconds default ( 5 secs for testing )
+REM
+REM	Spectrum stores at MCA memory after counting
+REM
+REM	Saved spectrum C:\LCMS\Spectra\DET1_Single_Cal_n.Chn; where n is no. of nuclide
+REM
+REM	ROI report ( ASCII ) will be generated after elapsed of measuring time
+REM
+REM	ROI report saved as : C:\LCMS\Data\DET1_Single_Cal_n.Dat; where n is no. of nuclide.
+REM
+REM	--------------------------------------------------------------
+
+
+REM Close all buffers if any
+
+CLOSEBUFFERS
+
+
+REM	------------------------------------------------------
+REM 	Set ZOOM -1 for minimize Maestro window after debug
+REM 	------------------------------------------------------
+
+REM	----------------------------------------------------------
+REM	Stop, clear MCA and preset live time for detector 1
+REM	----------------------------------------------------------
+
+
+REM ----------------------------------------------------------
+SET_DETECTOR 1
+STOP
+CLEAR
+SET_PRESET_CLEAR
+
+REM ** modify below command for different ROI file of Det1
+RECALL_ROI "C:\LCMS\ROI\DET1_ROI5.ROI"
+
+REM ** modify below command for different counting time in second per nuclide
+SET_PRESET_LIVE 5
+
+
+	REM Modify loop value for total number of nuclides
+	Loop 5
+
+	REM ***************** Start of looping ******************
+
+	DESCRIBE_SAMPLE "Detector 1 Nuclide $(Loop1)"
+	ASK_CONFIRM "Place Calibration Standard < $(Loop1) > in Position, then press OK"
+
+	CLEAR
+	START
+
+	WAIT 2
+	WAIT
+
+	REM Save calibration spectrum of current nuclide
+	REM $(Loop1) has value of 1, 2, 3, 4 and 5 for "Loop 5" command
+
+	REM ASK_CONFIRM "Pause for saving detector 1 spectrum"	
+
+	SAVE "C:\LCMS\SPECTRA\DET1_Single_Cal_$(Loop1).Chn"
+	WAIT
+	REPORT "C:\LCMS\Data\DET1_Single_Cal_$(Loop1).Dat"
+	WAIT
+
+	End_Loop
+
+ASK_CONFIRM "Calibration Done O.K. !"
+
+
+REM quit Maestro and return to calling program 
+REM QUIT
+
+REM * * * * Job file end * * * *
+
