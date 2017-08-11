@@ -274,6 +274,9 @@
     <Content Include="Images\icon.ico" />
     <Content Include="inpout32.dll" />
     <Content Include="Images\lcms.ico" />
+    <Content Include="xml\Basic.xml" />
+    <Content Include="xml\Isotope.xml" />
+    <Content Include="xml\Script.xml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

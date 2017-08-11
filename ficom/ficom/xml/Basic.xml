@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Lang>Zn</Lang>
+  <ExePath>C:\Program Files\Maestro\mca32.exe</ExePath>  
+</BasicSetting>
