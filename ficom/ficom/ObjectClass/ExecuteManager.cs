@@ -29,34 +29,39 @@ namespace LCMS
             Process.Start(startInfo);
         }
 
-        public AxUMCBILib.AxUCONN2 axUCONN21;
-        public AxUMCBILib.AxUDROP axUDROP1;
-        public AxUMCBILib.AxULIST axULIST1;
+
 
         public void OpenConnection(int detectorIndex)
         {
-            axUDROP1.SelIndex = detectorIndex;
-            axUCONN21.Address = axUDROP1.SelAddress;
-            if (!axUCONN21.IsOpen)
-            {
-                axUCONN21.Open();
-            }
+            //if (detectorIndex == 1)
+            //{
+            //    if (!GlobalFunc.axUCONN21.IsOpen)
+            //    {
+            //        GlobalFunc.axUCONN21.Open();
+            //    }
+            //}
+            //else if (detectorIndex == 2)
+            //{
+            //    if (!GlobalFunc.axUCONN22.IsOpen)
+            //    {
+            //        GlobalFunc.axUCONN22.Open();
+            //    }
+            //}
         }
 
         public void CloseConnection(int detectorIndex)
         {
-            axUDROP1.SelIndex = detectorIndex;
-            axUCONN21.Address = axUDROP1.SelAddress;
-            if (axUCONN21.IsOpen)
-            {
-                axUCONN21.Close();
-            }
+            //if (GlobalFunc.axUCONN21.IsOpen)
+            //{
+            //    GlobalFunc.axUCONN21.Close();
+            //}
         }
 
         public void SendCommand(string command)
         {
             //OpenConnection(detectorIndex);
-            axUCONN21.Comm(command);
+            
+            //GlobalFunc.axUCONN21.Comm(command);
             //CloseConnection(detectorIndex);
         }
 

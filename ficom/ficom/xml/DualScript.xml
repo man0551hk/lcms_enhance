@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<DualScript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <WarmUpBegin></WarmUpBegin>
-  <WarmUpEnd></WarmUpEnd>
+<ScriptSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WarmUpBegin>JobFiles\Begin_Det_warmup.Job</WarmUpBegin>
+  <WarmUpEnd>JobFiles\End_Det_warmup.Job</WarmUpEnd>
   <WarmUpChn></WarmUpChn>
-  <WarmUpData></WarmUpData>
-  <BackgroundBegin></BackgroundBegin>
-  <BackgroundEnd></BackgroundEnd>
-  <BackgroundData></BackgroundData>
+  <WarmUpData>Data\Det_WarmUp.Dat</WarmUpData>
+  <BackgroundBegin>JobFiles\Begin_Det1_Bgd.Job</BackgroundBegin>
+  <BackgroundEnd>JobFiles\End_Det1_Bgd.Job</BackgroundEnd>
+  <BackgroundData>Data\DET2_Bgd.Dat</BackgroundData>
   <Roi4></Roi4>
   <Roi5></Roi5>
   <Roi6></Roi6>
@@ -17,4 +17,4 @@
   <MeasureBegin></MeasureBegin>
   <MeasureEnd></MeasureEnd>
   <MeasureData></MeasureData>
-</DualScript>
+</ScriptSet>

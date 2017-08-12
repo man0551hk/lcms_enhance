@@ -1,0 +1,78 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : End_WarmUp.Job
+REM   
+REM	Description : Auto K40 peak adjustments
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1
+REM
+REM	Date : 25 Oct. 2014
+REM
+REM     ------------------------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Call this job file after Begin_Warmup.Job has been done.
+REM
+REM	It is to set K40 peak at 900 +/- 10 channel by using Kcl ref.
+REM
+REM	Both gain and zero stabilizers are enabled and set peak at 900
+REM	with width of 101 channels
+REM
+REM	Cycle time is 300 seconds and could be repeated if peak outsides 900 +/- 10
+REM
+REM	Enable zero stabilzer before quitting
+REM
+REM	-------------------------------------------------------------------
+
+
+REM Close all buffers if any
+
+REM Add ZOOM -1 for minimizing Maestro window after debug
+
+
+CLOSEBUFFERS
+
+REM	----------
+REM	Detector 1
+REM	----------
+
+SET_DETECTOR 1
+STOP
+SET_PRESET_CLEAR
+SET_PRESET_LIVE 300
+
+REM ASK_CONFIRM "Enable zero stab"
+SEND_MESSAGE "ENABLE_ZERO_STAB"
+
+SAVE "C:\LCMS\DET1_Warmup.Chn"
+WAIT 2
+
+
+
+REM	----------
+REM	Detector 2
+REM	----------
+
+SET_DETECTOR 2
+STOP
+SET_PRESET_CLEAR
+SET_PRESET_LIVE 300
+
+REM ASK_CONFIRM "Enable zero stab"
+SEND_MESSAGE "ENABLE_ZERO_STAB"
+
+SAVE "C:\LCMS\DET2_Warmup.Chn"
+WAIT 2
+
+
+ASK_CONFIRM "Check K40 peak at 900 +/- 10 channel !"
+
+BEEP 0  
+
+QUIT
+
+REM * * * * END * * * *
+

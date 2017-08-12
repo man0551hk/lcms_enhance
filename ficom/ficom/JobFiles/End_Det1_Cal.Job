@@ -1,0 +1,56 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : End_Det1_Cal.Job
+REM   
+REM	Description : Ending Calibration of Detector 1
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.0
+REM
+REM	Date : 7 Jan. 2015
+REM
+REM     -------------------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Ending Calibration of Detector 1
+REM
+REM	This job file is called only after Update_Det1_Cal_Spc.Job
+REM
+REM	DET1_ROI5.ROI is using for ROI reports ( default )
+REM
+REM	Saved spectrum and ROI report will be generated :
+REM
+REM	Saved spectrum C:\LCMS\Spectra\DET1_Cal.Chn
+REM 
+REM	ROI report file C:\LCMS\Data\DET1_Cal.Dat
+REM 
+REM	Livetime shown in ROI report for MULITPLE regions need to multiply by no. of region
+REM
+REM	--------------------------------------------------------------
+
+CLOSEBUFFERS
+
+
+REM -----------------------------------------
+REM Saving spectra and generating ROI Reports
+REM -----------------------------------------
+
+SET_BUFFER
+RECALL "C:\LCMS\SPECTRA\DET1_TMP.CHN"
+DESCRIBE_SAMPLE "Detector 1 Calibration"
+SAVE "C:\LCMS\SPECTRA\DET1_Cal.Chn"
+WAIT
+
+REM ** modify below command for different ROI file of Det1
+RECALL_ROI "C:\LCMS\ROI\DET1_ROI5.ROI"
+REPORT "C:\LCMS\Data\DET1_Cal.Dat"
+WAIT
+
+
+REM quit Maestro and return to calling program 
+QUIT
+
+REM * * * * Job file end * * * *
+

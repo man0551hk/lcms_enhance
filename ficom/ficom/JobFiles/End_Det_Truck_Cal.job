@@ -1,0 +1,29 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : End_Det_Truck_Cal.JOB
+REM   
+REM	Description : End Detector Calibration for truck geometry 
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.2
+REM
+REM	Date : 26 Dec. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Call this job file only after Begin_Det_Truck_Cal.Job has been done.
+REM
+REM	--------------------------------------------------------
+
+
+REM Close all buffers if any
+
+CLOSEBUFFERS
+
+REM quit Maestro and return to calling program 
+QUIT
+
+REM * * * * Job file end * * * *

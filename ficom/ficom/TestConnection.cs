@@ -232,9 +232,21 @@ namespace LCMS
                     axUCONN21.Open();
                     if (axUCONN21.ID == 1)
                     {
-                        string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
-                        thisICR = thisICR.Replace("CRM ", "");
-                        GlobalFunc.det1_icr = Convert.ToDouble(thisICR);
+                        try
+                        {
+                            string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
+                            thisICR = thisICR.Replace("CRM ", "");
+                            GlobalFunc.det1_icr = Convert.ToDouble(thisICR);
+                        }
+                        catch (Exception ex)
+                        { }
+
+                        GlobalFunc.axUDROP1 = new AxUMCBILib.AxUDROP();
+                        GlobalFunc.axUCONN21 = new AxUMCBILib.AxUCONN2();
+
+                        GlobalFunc.axUDROP1 = axUDROP1;
+                        GlobalFunc.axUCONN21 = axUCONN21;
+                        GlobalFunc.axUCONN21.Open();
                     }
                     else
                     {
@@ -275,9 +287,22 @@ namespace LCMS
                     axUCONN21.Comm("ENAB_HV");
                     if (axUCONN21.ID == 2)
                     {
-                        string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
-                        thisICR = thisICR.Replace("CRM ", "");
-                        GlobalFunc.det2_icr = Convert.ToDouble(thisICR);
+                        try
+                        {
+                            string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
+                            thisICR = thisICR.Replace("CRM ", "");
+                            GlobalFunc.det2_icr = Convert.ToDouble(thisICR);
+                        }
+                        catch (Exception ex)
+                        { }
+
+                        GlobalFunc.axUDROP2 = new AxUMCBILib.AxUDROP();
+                        GlobalFunc.axUCONN22 = new AxUMCBILib.AxUCONN2();
+
+                        GlobalFunc.axUDROP2 = axUDROP1;
+                        GlobalFunc.axUCONN22 = axUCONN21;
+                        GlobalFunc.axUCONN22.Open();
+
                         retry = false;
                     }
                     else

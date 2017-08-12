@@ -1,0 +1,29 @@
+REM
+REM  ORTEC Job File : Test for call.JOB
+REM   
+REM  Description : Test for nested calls
+REM 
+REM  Version 1
+REM
+REM  Date : 8 July 2014
+REM
+REM -----------------------------
+REM Beginning of first loop
+REM -----------------------------
+
+
+SET_DETECTOR 0
+
+ASK_CONFIRM " Calling first Loop ???."
+
+CALL SHOW_Loop.JOB
+
+RUN "First.exe"
+
+
+ASK_CONFIRM " Calling Second Loop ???."
+
+CALL SHOW_Loop.JOB
+
+
+

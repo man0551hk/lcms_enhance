@@ -1,0 +1,104 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : Begin_Det_Measure.Job
+REM   
+REM	Description : Measurement for Detectors 1 and 2
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.4
+REM
+REM	Date : 26 Dec. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Meaure Detectors 1 and 2
+REM
+REM	DET1_ROI5.ROI and DET2_ROI5.ROI are using for ROI reports ( default )
+REM
+REM	Measuring time is 60 seconds default ( 10 secs for testing )
+REM
+REM	Spectrum store at MCA memory after counting
+REM
+REM	C:\LCMS\Spectra\DET1_Measure.Chn and DET2_Measure.Chn
+REM
+REM	ROI reports ( ASCII ) will be generated after elapsed of measuring time
+REM	ROI reports saved as : C:\LCMS\Data\DET1_Measure.Dat and DET2_Measure.Dat
+REM
+REM	--------------------------------------------------------
+
+
+REM Close all buffers if any
+
+CLOSEBUFFERS
+
+
+REM	------------------------------------------------------
+REM 	Set ZOOM -1 for minimize Maestro window after debug
+REM 	------------------------------------------------------
+
+REM	---------------------------------------------------------
+REM	Stop, clear MCA and preset live time for detectorS 1 & 2
+REM	---------------------------------------------------------
+
+
+REM ----------------------------------------------------------
+SET_DETECTOR 1
+STOP
+CLEAR
+SET_PRESET_CLEAR
+
+REM ** modify counting time in seconds
+SET_PRESET_LIVE 10
+
+REM ** modify ROI file of Det1
+RECALL_ROI "C:\LCMS\ROI\DET1_ROI5.ROI"
+DESCRIBE_SAMPLE "Detector 1 Measurement"
+
+REM ----------------------------------------------------------
+SET_DETECTOR 2
+STOP
+CLEAR
+SET_PRESET_CLEAR
+
+REM ** modify counting time in seconds
+SET_PRESET_LIVE 10
+
+REM ** modify ROI file of Det2
+RECALL_ROI "C:\LCMS\ROI\DET2_ROI5.ROI"
+DESCRIBE_SAMPLE "Detector 2 Measurement"
+
+
+REM	------------------
+REM	Current detector 2
+REM	------------------ 
+START
+
+SET_DETECTOR 1
+START
+
+REM WAIT 2
+REM WAIT
+
+
+REM REM Current Detector is 1
+REM SAVE "C:\LCMS\SPECTRA\DET1_Measure.Chn"
+REM WAIT
+REM REPORT "C:\LCMS\Data\DET1_Measure.Dat"
+REM WAIT
+
+REM SET_DETECTOR 2
+REM SAVE "C:\LCMS\SPECTRA\DET2_Measure.Chn"
+REM WAIT
+REM REPORT "C:\LCMS\Data\DET2_Measure.Dat"
+REM WAIT
+
+
+REM quit Maestro and return to calling program 
+
+QUIT
+
+REM * * * * Job file end * * * *
+

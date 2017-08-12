@@ -28,9 +28,9 @@ namespace LCMS
             GlobalFunc.logManager.CreateUserLogFile();
             GlobalFunc.assembly = Assembly.Load("LCMS");
 
-            if (!Directory.Exists(@"C:\LCMS\defaultSetting"))
+            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "defaultSetting"))
             {
-                Directory.CreateDirectory(@"C:\LCMS\defaultSetting");
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "defaultSetting");
             }
 
 

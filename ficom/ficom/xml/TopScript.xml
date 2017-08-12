@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TopScript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <WarmUpBegin>C:\LCMS\JobFiles\Begin_Det1_warmup.Job</WarmUpBegin>
-  <WarmUpEnd>C:\LCMS\JobFiles\End_Det1_warmup.Jo</WarmUpEnd>
-  <WarmUpChn></WarmUpChn>
-  <WarmUpData></WarmUpData>
-  <BackgroundBegin></BackgroundBegin>
-  <BackgroundEnd></BackgroundEnd>
-  <BackgroundData></BackgroundData>
-  <Roi4></Roi4>
-  <Roi5></Roi5>
-  <Roi6></Roi6>
+<ScriptSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WarmUpBegin>JobFiles\Begin_Det1_warmup.Job</WarmUpBegin>
+  <WarmUpEnd>JobFiles\End_Det1_warmup.Job</WarmUpEnd>
+  
+  <WarmUpChn>C:\LCMS\Spectra\Det1_WarmUp.chn</WarmUpChn>
+  <WarmUpData>C:\LCMS\Data\Det1_WarmUp.Dat</WarmUpData>
+  
+  <BackgroundBegin>JobFiles\Begin_Det1_Bgd.Job</BackgroundBegin>
+  <BackgroundEnd>JobFiles\End_Det1_Bgd.Job</BackgroundEnd>
+  
+  <BackgroundChn>C:\LCMS\Spectra\Det1_Bgd.chn</BackgroundChn>
+  <BackgroundData>>C:\LCMS\Data\DET1_Bgd.Dat</BackgroundData>
+  
+  <Roi4>C:\LCMS\Roi\Det1_ROI4.ROI</Roi4>
+  <Roi5>C:\LCMS\Roi\Det1_ROI5.ROI</Roi5>
+  <Roi6>C:\LCMS\Roi\Det1_ROI6.ROI</Roi6>
+  
   <CalibrationBegin></CalibrationBegin>
   <CalibrationEnd></CalibrationEnd>
   <CalibrationUpdate></CalibrationUpdate>
@@ -17,4 +23,4 @@
   <MeasureBegin></MeasureBegin>
   <MeasureEnd></MeasureEnd>
   <MeasureData></MeasureData>
-</TopScript>
+</ScriptSet>

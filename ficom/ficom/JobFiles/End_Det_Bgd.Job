@@ -1,0 +1,61 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : End_Det_Bgd.Job
+REM   
+REM	Description : Ending Detector bgd for both detectors
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1.2
+REM
+REM	Date : 27 Dec. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	This job file is called after Begin_Det_Bgd.Job has been done.
+REM
+REM	Bgd Spectra saved as C:\LCMS\SPECTRA\DET1_Bgd.Chn & DET2_Bgd.Chn
+REM
+REM	Bgd ROI Reports saved as C:\LCMS\DATA\DET1_Bgd.Dat & DET2_Bgd.Dat
+REM
+REM	--------------------------------------------------------
+
+REM Close all buffers if any
+
+REM Add ZOOM -1 for minimizing Maestro window after debug
+
+CLOSEBUFFERS
+
+
+
+SET_DETECTOR 1
+STOP
+
+DESCRIBE_SAMPLE "Detector 1 Background"
+SAVE "C:\LCMS\SPECTRA\DET1_Bgd.Chn"
+WAIT
+
+REM ROI file for det1 must be loaded before calling REPORT
+REPORT "C:\LCMS\DATA\DET1_Bgd.Dat"
+WAIT
+
+SET_DETECTOR 2
+STOP
+
+DESCRIBE_SAMPLE "Detector 2 Background"
+SAVE "C:\LCMS\SPECTRA\DET2_Bgd.Chn"
+WAIT
+
+REM ROI file for det1 must be loaded before calling REPORT
+REPORT "C:\LCMS\DATA\DET2_Bgd.Dat"
+WAIT
+
+
+REM Quit Maestro and return to calling progrram
+QUIT
+
+REM * * * * END * * * *
+
+

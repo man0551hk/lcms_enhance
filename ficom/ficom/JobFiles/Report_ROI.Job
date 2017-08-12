@@ -1,0 +1,19 @@
+REM
+REM  ORTEC Job File : Show_Loop.JOB
+REM   
+REM  Description : Show loop number
+REM 
+REM  Version 1
+REM
+REM  Date : 8 July 2014
+REM
+REM -----------------------------
+
+REM ASK_CONFIRM "Calling Loop the ??? times."
+
+SET_DETECTOR 0
+RECALL_ROI "LCMS.ROI"
+REPORT "MEASURE.TXT"
+
+
+REM * * * * Job file end * * * *

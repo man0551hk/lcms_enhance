@@ -1,0 +1,81 @@
+REM
+REM  ORTEC Job File : Test_Loop.JOB
+REM   
+REM  Description : Testing of loop variables
+REM 
+REM  Version 1
+REM
+REM  Date : 6 May 2014
+REM
+REM -----------------------------
+REM Beginning of first loop
+REM -----------------------------
+
+LOOP 1
+
+REM Close all buffers if any
+
+CLOSEBUFFERS
+
+REM SET_BUFFER
+
+REM CLEAR ALL
+
+RECALL “test.chn”
+
+REM -----------------------------
+
+REM ZOOM -1 to minimize Maestro window
+
+ASK_CONFIRM " First Loop value ???."
+
+SET_DETECTOR 0
+
+Describe_Sample "Spectrum of Detector ???"
+
+SAVE "Loop_???.CHN"
+
+	REM -----------------------------
+	REM Beginning of Second loop
+	REM -----------------------------
+
+	Loop 2
+
+	ASK_CONFIRM " 2nd loop value ???."
+
+		REM -----------------------------
+		REM Beginning of 3rd loop
+		REM -----------------------------
+
+		Loop 3
+
+		ASK_CONFIRM " 3rd loop value ???."
+
+		End_Loop
+
+		REM -----------------------------
+		REM Ending of 3rd loop
+		REM -----------------------------
+
+	WAIT
+
+	END_LOOP
+
+	REM -----------------------------
+	REM End of 2nd looping
+	REM -----------------------------
+
+REM -----------------------------
+REM Ending of first loop
+REM -----------------------------
+
+
+BEEP 1000,1000
+
+ASK_CONFIRM " Measurement END_??? Completed ! "
+
+REM Add Quit command for exit to Windows if called by MCA32.exe
+
+REM QUIT
+
+REM * * * * Job file end * * * *

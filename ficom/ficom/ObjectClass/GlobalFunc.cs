@@ -90,6 +90,15 @@ namespace LCMS
         public static int DetectorID2 = 0;
         public static int currentDetectorID = 0;
 
+
+        public static AxUMCBILib.AxUCONN2 axUCONN21;
+        public static AxUMCBILib.AxUDROP axUDROP1;
+        public static AxUMCBILib.AxULIST axULIST1;
+
+        public static AxUMCBILib.AxUCONN2 axUCONN22;
+        public static AxUMCBILib.AxUDROP axUDROP2;
+        public static AxUMCBILib.AxULIST axULIST2;
+
         public static void ResetConnectDetector()
         { 
             connectedToDetector1 = false;

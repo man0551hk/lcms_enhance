@@ -1,0 +1,83 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : Begin_Bgd.Job
+REM   
+REM	Description : Begin Background measurement
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1
+REM
+REM	Date : 25 Oct. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Call this job file only after Warmup cycle has done.
+REM	That is the K40 peak is within 900 +/- 10 channels
+REM
+REM	Both gain and zero stabilizers are enabled and set
+REM	at peak at 900 of width of 101 channels	
+REM
+REM	Detector ROI files are called for ROI reporting
+REM	DET1_ROI.ROI and DET2_ROI.ROI
+REM
+REM	Bgd measuring time is at least 1800 sec. or twice 
+REM	the sample measuring time	
+REM
+REM	Job file returns to calling program after counting begin
+REM	
+REM	Bgd Spectrum stores at MCA memory after counting
+REM
+REM	Another Job file Read_LCMS_Bgd.Job will be called after
+REM	bgd measuring time elapsed for reading detectors ROI reports
+REM
+REM	--------------------------------------------------------
+
+
+REM Close all buffers if any
+
+CLOSEBUFFERS
+
+
+REM	------------------------------------------------------
+REM 	Set ZOOM -1 for minimize Maestro window after debug
+REM 	------------------------------------------------------
+
+REM	----------------------------------------------------------
+REM	Stop, clear MCA and preset live time for detectors 1 and 2
+REM	----------------------------------------------------------
+
+
+CLOSEMCBS
+
+SET_DETECTOR 1
+STOP
+CLEAR
+SET_PRESET_CLEAR
+SET_PRESET_LIVE 1800
+RECALL_ROI "C:\LCMS\DET1_ROI.ROI"
+
+
+SET_DETECTOR 2
+STOP
+CLEAR
+SET_PRESET_CLEAR
+SET_PRESET_LIVE 1800
+RECALL_ROI "C:\LCMS\DET2_ROI.ROI"
+
+
+REM Begin counting at current detector 2
+START
+
+
+REM Select detector 1 for counting
+SET_DETECTOR 1
+START
+
+
+REM quite job file and return to calling program 
+QUIT
+
+REM * * * * Job file end * * * *

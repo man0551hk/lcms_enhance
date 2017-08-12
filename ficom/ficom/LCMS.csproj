@@ -255,6 +255,71 @@
     <EmbeddedResource Include="TestConnection.resx">
       <DependentUpon>TestConnection.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="JobFiles\Begin_Bgd Debug.job" />
+    <None Include="JobFiles\Begin_Det1_bgd.job" />
+    <None Include="JobFiles\Begin_Det1_Cal.Job" />
+    <None Include="JobFiles\Begin_Det1_Measure.Job" />
+    <None Include="JobFiles\Begin_Det1_Single_Cal.Job" />
+    <None Include="JobFiles\Begin_Det1_Truck_Cal.job" />
+    <None Include="JobFiles\Begin_Det1_WarmUp.Job" />
+    <None Include="JobFiles\Begin_Det2_bgd.job" />
+    <None Include="JobFiles\Begin_Det2_Cal.job" />
+    <None Include="JobFiles\Begin_Det2_Measure.Job" />
+    <None Include="JobFiles\Begin_Det2_Single_Cal.Job" />
+    <None Include="JobFiles\Begin_Det2_Truck_Cal.Job" />
+    <None Include="JobFiles\Begin_Det2_WarmUp.Job" />
+    <None Include="JobFiles\Begin_Det_bdg.job" />
+    <None Include="JobFiles\Begin_Det_Bgd.Job" />
+    <None Include="JobFiles\Begin_Det_Cal.Job" />
+    <None Include="JobFiles\Begin_Det_Measure.Job" />
+    <None Include="JobFiles\Begin_Det_Single_Cal.Job" />
+    <None Include="JobFiles\Begin_Det_Truck_Cal.Job" />
+    <None Include="JobFiles\Begin_Det_WarmUp.JOb" />
+    <None Include="JobFiles\Begin_WarmUp debug.job" />
+    <None Include="JobFiles\End_Bgd Debug.Job" />
+    <None Include="JobFiles\End_Det1_bgd.Job" />
+    <None Include="JobFiles\End_Det1_Cal.Job" />
+    <None Include="JobFiles\End_Det1_Measure.Job" />
+    <None Include="JobFiles\End_Det1_Single_Cal.Job" />
+    <None Include="JobFiles\End_Det1_Truck_Cal.job" />
+    <None Include="JobFiles\End_Det1_Warmup.Job" />
+    <None Include="JobFiles\End_Det2_bgd.Job" />
+    <None Include="JobFiles\End_Det2_Cal.Job" />
+    <None Include="JobFiles\End_Det2_Measure.Job" />
+    <None Include="JobFiles\End_Det2_Single_Cal.Job" />
+    <None Include="JobFiles\End_Det2_Truck_Cal.Job" />
+    <None Include="JobFiles\End_Det2_Warmup.Job" />
+    <None Include="JobFiles\End_Det_Bgd.Job" />
+    <None Include="JobFiles\End_Det_Bgd_V2.job" />
+    <None Include="JobFiles\End_Det_Cal.job" />
+    <None Include="JobFiles\End_Det_Measure.Job" />
+    <None Include="JobFiles\End_Det_Measure_V2.job" />
+    <None Include="JobFiles\End_Det_Single_Cal.Job" />
+    <None Include="JobFiles\End_Det_Truck_Cal.job" />
+    <None Include="JobFiles\End_Det_Warmup.Job" />
+    <None Include="JobFiles\End_Det_Warmup_V2.Job" />
+    <None Include="JobFiles\End_WarmUp debug.Job" />
+    <None Include="JobFiles\Report_ROI.Job" />
+    <None Include="JobFiles\Show_Loop.JOB" />
+    <None Include="JobFiles\temp_Begin_Det1_Bgd.Job" />
+    <None Include="JobFiles\temp_Begin_Det1_Cal.Job" />
+    <None Include="JobFiles\temp_Begin_Det1_Measure.Job" />
+    <None Include="JobFiles\temp_Begin_Det2_Bgd.Job" />
+    <None Include="JobFiles\temp_Begin_Det2_Cal.job" />
+    <None Include="JobFiles\temp_Begin_Det2_Measure.Job" />
+    <None Include="JobFiles\temp_Begin_Det_Bgd.Job" />
+    <None Include="JobFiles\temp_Begin_Det_Cal.Job" />
+    <None Include="JobFiles\temp_End_Det1_Cal.Job" />
+    <None Include="JobFiles\temp_End_Det2_Cal.Job" />
+    <None Include="JobFiles\temp_End_Det_Cal.job" />
+    <None Include="JobFiles\temp_Update_Det1_Cal_Spc.Job" />
+    <None Include="JobFiles\temp_Update_Det2_Cal_Spc.job" />
+    <None Include="JobFiles\temp_Update_Det_Cal_Spc.Job" />
+    <None Include="JobFiles\Test for call.Job" />
+    <None Include="JobFiles\Test_loop.job" />
+    <None Include="JobFiles\Update_Det1_Cal_Spc.Job" />
+    <None Include="JobFiles\Update_Det2_Cal_Spc.job" />
+    <None Include="JobFiles\Update_Det_Cal_Spc.Job" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -270,10 +335,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JobFiles\first.exe" />
+    <Content Include="xml\BottomScript.xml" />
+    <Content Include="xml\DualScript.xml" />
     <Content Include="Images\1266124536476.jpg" />
     <Content Include="Images\icon.ico" />
     <Content Include="inpout32.dll" />
     <Content Include="Images\lcms.ico" />
+    <Content Include="xml\TopScript.xml" />
     <Content Include="xml\Basic.xml" />
     <Content Include="xml\Isotope.xml" />
     <Content Include="xml\Script.xml" />
@@ -314,9 +383,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="JobFiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

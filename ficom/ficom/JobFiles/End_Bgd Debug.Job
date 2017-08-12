@@ -1,0 +1,74 @@
+REM	-----------------------------------------------
+REM	
+REM	ORTEC Job File : End_Bgd.Job
+REM   
+REM	Description : Read Background ROI Data 
+REM 
+REM	Application Software : A65-BW V7.01
+REM
+REM	Job Version 1
+REM
+REM	Date : 25 Oct. 2014
+REM
+REM     ---------------------------------------------------
+REM	
+REM	Description :
+REM
+REM	Call this job file only after Begin_Bgd.Job has been done.
+REM
+REM	Background Spectra stored at MCA memory
+REM
+REM	Bgd spectra are saved as DET1_Bgd.Chn and DET2_Bgd.Chn
+REM
+REM	Bgd ROI reports are saved as DET1_Bgd.Dat and DET2_Bgd.Dat
+REM	--------------------------------------------------------
+
+
+REM Close all buffers if any
+
+CLOSEBUFFERS
+
+
+REM	------------------------------------------------------
+REM 	Set ZOOM -1 for minimize Maestro window after debug
+REM 	------------------------------------------------------
+
+REM	--------------------------------------------
+REM	Stop, save spectra and generate ROI reports 
+REM	--------------------------------------------
+
+
+CLOSEMCBS
+
+
+REM	------------------
+REM	Detector 1
+REM	------------------
+
+SET_DETECTOR 1
+STOP
+DESCRIBE_SAMPLE "Detector 1 Background"
+SAVE "C:\LCMS\DET1_Bgd.Chn"
+WAIT 2
+REPORT "C:\LCMS\DET1_Bgd.Dat"
+WAIT 2
+
+
+
+REM	------------------
+REM	Detector 2
+REM	------------------
+
+SET_DETECTOR 2
+STOP
+DESCRIBE_SAMPLE "Detector 2 Background"
+SAVE "C:\LCMS\DET2_Bgd.Chn"
+WAIT 2
+REPORT "C:\LCMS\DET2_Bgd.Dat"
+WAIT 2
+
+
+REM quit Maestro and return to calling program 
+QUIT
+
+REM * * * * Job file end * * * *

@@ -3338,7 +3338,7 @@ namespace LCMS
             scriptPanel.Visible = true;
             wuBeginTxt.Text = GlobalFunc.topScriptSet.WarmUpBegin;
             wuEndTxt.Text = GlobalFunc.topScriptSet.WarmUpEnd;
-            wuRoiTxt.Text = GlobalFunc.topScriptSet.WarmUpRoi;
+            //wuRoiTxt.Text = GlobalFunc.topScriptSet.WarmUpRoi;
             wuDataTxt.Text = GlobalFunc.topScriptSet.WarmUpData;
             bgBeginTxt.Text = GlobalFunc.topScriptSet.BackgroundBegin;
             bgEndTxt.Text = GlobalFunc.topScriptSet.BackgroundEnd;
@@ -3358,7 +3358,7 @@ namespace LCMS
             scriptPanel.Visible = true;
             wuBeginTxt.Text = GlobalFunc.bottomScriptSet.WarmUpBegin;
             wuEndTxt.Text = GlobalFunc.bottomScriptSet.WarmUpEnd;
-            wuRoiTxt.Text = GlobalFunc.bottomScriptSet.WarmUpRoi;
+            //wuRoiTxt.Text = GlobalFunc.bottomScriptSet.WarmUpRoi;
             wuDataTxt.Text = GlobalFunc.bottomScriptSet.WarmUpData;
             bgBeginTxt.Text = GlobalFunc.bottomScriptSet.BackgroundBegin;
             bgEndTxt.Text = GlobalFunc.bottomScriptSet.BackgroundEnd;
@@ -3379,7 +3379,7 @@ namespace LCMS
             scriptPanel.Visible = true;
             wuBeginTxt.Text = GlobalFunc.dualScriptSet.WarmUpBegin;
             wuEndTxt.Text = GlobalFunc.dualScriptSet.WarmUpEnd;
-            wuRoiTxt.Text = GlobalFunc.dualScriptSet.WarmUpRoi;
+            //wuRoiTxt.Text = GlobalFunc.dualScriptSet.WarmUpRoi;
             wuDataTxt.Text = GlobalFunc.dualScriptSet.WarmUpData;
             bgBeginTxt.Text = GlobalFunc.dualScriptSet.BackgroundBegin;
             bgEndTxt.Text = GlobalFunc.dualScriptSet.BackgroundEnd;
@@ -3400,7 +3400,7 @@ namespace LCMS
             {
                 GlobalFunc.topScriptSet.WarmUpBegin = wuBeginTxt.Text;
                 GlobalFunc.topScriptSet.WarmUpEnd =  wuEndTxt.Text;
-                GlobalFunc.topScriptSet.WarmUpRoi =  wuRoiTxt.Text;
+                //GlobalFunc.topScriptSet.WarmUpRoi =  wuRoiTxt.Text;
                 GlobalFunc.topScriptSet.WarmUpData = wuDataTxt.Text;
                 GlobalFunc.topScriptSet.BackgroundBegin = bgBeginTxt.Text;
                 GlobalFunc.topScriptSet.BackgroundEnd =  bgEndTxt.Text;
@@ -3418,7 +3418,7 @@ namespace LCMS
             {
                 GlobalFunc.bottomScriptSet.WarmUpBegin = wuBeginTxt.Text;
                 GlobalFunc.bottomScriptSet.WarmUpEnd = wuEndTxt.Text;
-                GlobalFunc.bottomScriptSet.WarmUpRoi = wuRoiTxt.Text;
+                //GlobalFunc.bottomScriptSet.WarmUpRoi = wuRoiTxt.Text;
                 GlobalFunc.bottomScriptSet.WarmUpData = wuDataTxt.Text;
                 GlobalFunc.bottomScriptSet.BackgroundBegin = bgBeginTxt.Text;
                 GlobalFunc.bottomScriptSet.BackgroundEnd = bgEndTxt.Text;
@@ -3436,7 +3436,7 @@ namespace LCMS
             {
                 GlobalFunc.dualScriptSet.WarmUpBegin = wuBeginTxt.Text;
                 GlobalFunc.dualScriptSet.WarmUpEnd = wuEndTxt.Text;
-                GlobalFunc.dualScriptSet.WarmUpRoi = wuRoiTxt.Text;
+                //GlobalFunc.dualScriptSet.WarmUpRoi = wuRoiTxt.Text;
                 GlobalFunc.dualScriptSet.WarmUpData = wuDataTxt.Text;
                 GlobalFunc.dualScriptSet.BackgroundBegin = bgBeginTxt.Text;
                 GlobalFunc.dualScriptSet.BackgroundEnd = bgEndTxt.Text;

@@ -1310,22 +1310,22 @@ namespace LCMS
                 {
                     thisDetector = "Dual";
                     passDetector = true;
-                    GlobalFunc.warmupBeginScript = GlobalFunc.dualScriptSet.WarmUpBegin;
-                    GlobalFunc.warmupEndScript = GlobalFunc.dualScriptSet.WarmUpEnd;
+                    GlobalFunc.warmupBeginScript = AppDomain.CurrentDomain.BaseDirectory + GlobalFunc.dualScriptSet.WarmUpBegin;
+                    GlobalFunc.warmupEndScript = AppDomain.CurrentDomain.BaseDirectory + GlobalFunc.dualScriptSet.WarmUpEnd;
                 }
                 else if (GlobalFunc.connectedToDetector1 && GlobalFunc.basicSetting.PresetDetector.ToLower() == "top")
                 {
                     thisDetector = "Top";
                     passDetector = true;
-                    GlobalFunc.warmupBeginScript = GlobalFunc.topScriptSet.WarmUpBegin;
-                    GlobalFunc.warmupEndScript = GlobalFunc.topScriptSet.WarmUpEnd;
+                    GlobalFunc.warmupBeginScript = AppDomain.CurrentDomain.BaseDirectory + GlobalFunc.topScriptSet.WarmUpBegin;
+                    GlobalFunc.warmupEndScript = AppDomain.CurrentDomain.BaseDirectory + GlobalFunc.topScriptSet.WarmUpEnd;
                 }
                 else if (GlobalFunc.connectedToDetector2 && GlobalFunc.basicSetting.PresetDetector.ToLower() == "bottom")
                 {
                     thisDetector = "Bottom";
                     passDetector = true;
-                    GlobalFunc.warmupBeginScript = GlobalFunc.bottomScriptSet.WarmUpBegin;
-                    GlobalFunc.warmupEndScript = GlobalFunc.bottomScriptSet.WarmUpEnd;
+                    GlobalFunc.warmupBeginScript = AppDomain.CurrentDomain.BaseDirectory + GlobalFunc.bottomScriptSet.WarmUpBegin;
+                    GlobalFunc.warmupEndScript = AppDomain.CurrentDomain.BaseDirectory + GlobalFunc.bottomScriptSet.WarmUpEnd;
                 }
       
                 if (!passDetector)

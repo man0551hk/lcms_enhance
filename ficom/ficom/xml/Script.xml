@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<Det1_BeginWarmUp>C:\LCMS\JobFiles\Begin_Det1_warmup.Job</Det1_BeginWarmUp>
-	<Det1_EndWarmUp>C:\LCMS\JobFiles\End_Det1_warmup.Job</Det1_EndWarmUp>  
+	<Det1_BeginWarmUp>JobFiles\Begin_Det1_warmup.Job</Det1_BeginWarmUp>
+	<Det1_EndWarmUp>JobFiles\End_Det1_warmup.Job</Det1_EndWarmUp>  
 	<Det1_WarmUpChn>C:\LCMS\Spectra\Det1_WarmUp.chn</Det1_WarmUpChn>
-	<Det1_WarmUpData>C:\LCMS\Data\Det1_WarmUp.Dat</Det1_WarmUpData>    
-	<Det2_BeginWarmUp>C:\LCMS\JobFiles\Begin_Det2_warmup.Job</Det2_BeginWarmUp>  
-	<Det2_EndWarmUp>C:\LCMS\JobFiles\End_Det2_warmup.Job</Det2_EndWarmUp>  
+	<Det1_WarmUpData>C:\LCMS\Data\Det1_WarmUp.Dat</Det1_WarmUpData>  
+  
+	<Det2_BeginWarmUp>JobFiles\Begin_Det2_warmup.Job</Det2_BeginWarmUp>  
+	<Det2_EndWarmUp>JobFiles\End_Det2_warmup.Job</Det2_EndWarmUp>  
 	<Det2_WarmUpChn>C:\LCMS\Spectra\Det1_WarmUp.chn</Det2_WarmUpChn>
 	<Det2_WarmUpData>C:\LCMS\Data\Det1_WarmUp.Dat</Det2_WarmUpData>		
-	<Det_BeginWarmUp>C:\LCMS\JobFiles\Begin_Det_warmup.Job</Det_BeginWarmUp>
-	<Det_EndWarmUp>C:\LCMS\JobFiles\End_Det_warmup.Job</Det_EndWarmUp>	
-	<Det_WarmUpData>C:\LCMS\Data\Det_WarmUp.Dat</Det_WarmUpData>    	
-	<Det1_BeginBgd>C:\LCMS\JobFiles\Begin_Det1_Bgd.Job</Det1_BeginBgd>  
-	<Det1_EndBgd>C:\LCMS\JobFiles\End_Det1_Bgd.Job</Det1_EndBgd>  
+  
+	<Det_BeginWarmUp>JobFiles\Begin_Det_warmup.Job</Det_BeginWarmUp>
+	<Det_EndWarmUp>JobFiles\End_Det_warmup.Job</Det_EndWarmUp>
+	<Det_WarmUpData>C:\LCMS\Data\Det_WarmUp.Dat</Det_WarmUpData> 
+  
+	<Det1_BeginBgd>JobFiles\Begin_Det1_Bgd.Job</Det1_BeginBgd>  
+	<Det1_EndBgd>JobFiles\End_Det1_Bgd.Job</Det1_EndBgd>  
 	<Det1_BgdChn>C:\LCMS\Spectra\Det1_Bgd.chn</Det1_BgdChn>
 	<Det1_BgdData>C:\LCMS\Data\DET1_Bgd.Dat</Det1_BgdData>  	
-	<Det2_BeginBgd>C:\LCMS\JobFiles\Begin_Det2_Bgd.Job</Det2_BeginBgd>  
-	<Det2_EndBgd>C:\LCMS\JobFiles\End_Det2_Bgd.Job</Det2_EndBgd>  	
+  
+	<Det2_BeginBgd>JobFiles\Begin_Det2_Bgd.Job</Det2_BeginBgd>  
+	<Det2_EndBgd>JobFiles\End_Det2_Bgd.Job</Det2_EndBgd>  	
 	<Det2_BgdUpChn>C:\LCMS\Spectra\Det2_Bgd.chn</Det2_BgdUpChn>
 	<Det2_BgdData>C:\LCMS\Data\DET2_Bgd.Dat</Det2_BgdData>	
-	<Det_BeginBgd>C:\LCMS\JobFiles\Begin_Det_Bgd.Job</Det_BeginBgd>  
-	<Det_EndBgd>C:\LCMS\JobFiles\End_Det_Bgd.Job</Det_EndBgd>  
-	<Det_BgdData>C:\LCMS\Data\DET_Bgd.Dat</Det_BgdData>	
+  
+	<Det_BeginBgd>JobFiles\Begin_Det_Bgd.Job</Det_BeginBgd>  
+	<Det_EndBgd>JobFiles\End_Det_Bgd.Job</Det_EndBgd>  
+	<Det_BgdData>C:\LCMS\Data\DET_Bgd.Dat</Det_BgdData>
+  
 	<Det1_ROI>C:\LCMS\DET1_ROI.ROI</Det1_ROI>
 	<Det2_ROI>C:\LCMS\DET2_ROI.ROI</Det2_ROI>
 	<Det1_Roi4>C:\LCMS\Roi\Det1_ROI4.ROI</Det1_Roi4>
@@ -30,6 +36,7 @@
 	<Det2_Roi5>C:\LCMS\Roi\Det2_ROI5.ROI</Det2_Roi5>
 	<Det1_Roi6>C:\LCMS\Roi\Det1_ROI6.ROI</Det1_Roi6>
 	<Det2_Roi6>C:\LCMS\Roi\Det2_ROI6.ROI</Det2_Roi6>	
+  
 	<Det1_Cal4>C:\LCMS\Data\Det1_Cal4.Dat</Det1_Cal4>
 	<Det2_Cal4>C:\LCMS\Data\Det2_Cal4.Dat</Det2_Cal4>
 	<Det_Cal4>C:\LCMS\Data\Det_Cal4.Dat</Det_Cal4>	
@@ -39,15 +46,20 @@
 	<Det1_Cal6>C:\LCMS\Data\Det1_Cal6.Dat</Det1_Cal6>
 	<Det2_Cal6>C:\LCMS\Data\Det2_Cal6.Dat</Det2_Cal6>
 	<Det_Cal6>C:\LCMS\Data\Det_Cal6.Dat</Det_Cal6>	
+  
 	<Det1_MesChn>C:\LCMS\Spectra\Det1.chn</Det1_MesChn>
 	<Det2_MesChn>C:\LCMS\Spectra\Det2.chn</Det2_MesChn>	
+  
 	<Det1_MesData>C:\LCMS\Spectra\Det1.Dat</Det1_MesData>
 	<Det2_MesData>C:\LCMS\Spectra\Det2.Dat</Det2_MesData>
 	<Det_MesData>C:\LCMS\Spectra\Det.Dat</Det_MesData>	
+  
 	<Det1_Begin>C:\LCMS\JobFiles\Begin_Det1.Job</Det1_Begin>
 	<Det1_End>C:\LCMS\JobFiles\End_Det1.Job</Det1_End>
+  
 	<Det2_Begin>C:\LCMS\JobFiles\Begin_Det2.Job</Det2_Begin>
 	<Det2_End>C:\LCMS\JobFiles\End_Det2.Job</Det2_End>
+  
 	<Det_Begin>C:\LCMS\JobFiles\Begin_Det.Job</Det_Begin>
 	<Det_End>C:\LCMS\JobFiles\Begin_Det.Job</Det_End>	
 </Script>

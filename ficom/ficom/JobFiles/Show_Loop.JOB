@@ -1,0 +1,14 @@
+REM
+REM  ORTEC Job File : Show_Loop.JOB
+REM   
+REM  Description : Show loop number
+REM 
+REM  Version 1
+REM
+REM  Date : 8 July 2014
+REM
+REM -----------------------------
+
+ASK_CONFIRM "Calling Loop the ??? times."
+
+REM * * * * Job file end * * * *
