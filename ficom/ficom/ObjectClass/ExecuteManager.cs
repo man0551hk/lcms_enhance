@@ -67,7 +67,8 @@ namespace LCMS
                 {
                     GlobalFunc.axUCONN21.Open();
                 }
-                GlobalFunc.axUCONN21.Comm(command);
+                //GlobalFunc.axUCONN21.Comm(command);
+                GlobalFunc.axUCONN21.Comm("SHOW_VERSION");
                 if (GlobalFunc.axUCONN21.IsOpen)
                 {
                     GlobalFunc.axUCONN21.Close();
@@ -85,7 +86,10 @@ namespace LCMS
             string[] scriptText = File.ReadAllLines(this.scriptFilePath, Encoding.UTF8);
             for (int i = 0; i < scriptText.Length; i++)
             {
-                this.SendCommand(scriptText[i]);
+                if (scriptText[i].Substring(0, 3) != "REM")
+                {
+                    this.SendCommand(scriptText[i]);
+                }
             }
         }
     }

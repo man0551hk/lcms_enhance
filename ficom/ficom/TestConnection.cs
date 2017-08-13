@@ -16,30 +16,35 @@ namespace LCMS
     {
         public TestConnection()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            GlobalFunc.axUDROP1 = axUDROP1;
+            GlobalFunc.axUDROP2 = axUDROP1;
         }
 
         public void checkDetector1Connection()
         {
             bool retry = true;
             int retryCount = 0;
+            GlobalFunc.axUCONN21 = axUCONN21;
             while (retry)
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN21.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN21.Close();
                     }
                     axUDROP1.SelIndex = 1;
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    axUCONN21.Comm("SHOW_VERSION");
-                    axUCONN21.Comm("ENAB_HV");
-                    if (axUCONN21.ID == 1)
+                    GlobalFunc.axUDROP1.SelIndex = 1;
+                    GlobalFunc.axUCONN21.Address = axUDROP1.SelAddress;
+                    GlobalFunc.axUCONN21.Open();
+                    GlobalFunc.axUCONN21.Comm("SHOW_VERSION");
+                    GlobalFunc.axUCONN21.Comm("ENAB_HV");
+                    if (GlobalFunc.axUCONN21.ID == 1)
                     {
-                        GlobalFunc.DetectorID1 = axUCONN21.ID;
+                        GlobalFunc.DetectorID1 = GlobalFunc.axUCONN21.ID;
                         GlobalFunc.connectedToDetector1 = true;
+
                         retry = false;
                     }
                     else
@@ -48,7 +53,7 @@ namespace LCMS
                         retryCount++;
                         GlobalFunc.connectedToDetector1 = false;
                     }
-                    axUCONN21.Close();
+                    //GlobalFunc.axUCONN21.Close();
                 }
                 catch (Exception ex)
                 {
@@ -67,21 +72,23 @@ namespace LCMS
         {
             bool retry = true;
             int retryCount = 0;
-            axUDROP1.SelIndex = 2;
+
+            GlobalFunc.axUCONN22 = axUCONN21;
+            GlobalFunc.axUDROP2.SelIndex = 2;
             while (retry)
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN22.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN22.Close();
                     }
-                    
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    axUCONN21.Comm("SHOW_VERSION");
-                    axUCONN21.Comm("ENAB_HV");
-                    if (axUCONN21.ID == 2)
+
+                    GlobalFunc.axUCONN22.Address = axUDROP1.SelAddress;
+                    GlobalFunc.axUCONN22.Open();
+                    GlobalFunc.axUCONN22.Comm("SHOW_VERSION");
+                    GlobalFunc.axUCONN22.Comm("ENAB_HV");
+                    if (GlobalFunc.axUCONN22.ID == 2)
                     {
                         GlobalFunc.DetectorID1 = axUCONN21.ID;
                         GlobalFunc.connectedToDetector2 = true;
@@ -93,7 +100,7 @@ namespace LCMS
                         retryCount++;
                         GlobalFunc.connectedToDetector2 = false;
                     }
-                    axUCONN21.Close();
+                    //GlobalFunc.axUCONN22.Close();
                 }
                 catch (Exception ex)
                 {
@@ -104,8 +111,8 @@ namespace LCMS
                 {
                     try
                     {
-                        axUDROP1.SelIndex = 1;
-                        axUCONN21.Address = axUDROP1.SelAddress;
+                        GlobalFunc.axUDROP2.SelIndex = 1;
+                        GlobalFunc.axUCONN22.Address = GlobalFunc.axUDROP1.SelAddress;
                     }
                     catch { }
                 }
@@ -127,16 +134,14 @@ namespace LCMS
                 {
                     try
                     {
-                        if (axUCONN21.IsOpen)
+                        if (GlobalFunc.axUCONN21.IsOpen)
                         {
-                            axUCONN21.Close();
+                            GlobalFunc.axUCONN21.Close();
                         }
-                        axUDROP1.SelIndex = 1;
-                        axUCONN21.Address = axUDROP1.SelAddress;
-                        axUCONN21.Open();
-                        if (axUCONN21.ID == 1)
+                        GlobalFunc.axUCONN21.Open();
+                        if (GlobalFunc.axUCONN21.ID == 1)
                         {
-                            string thisTemp = GlobalFunc.tc.axUCONN21.Comm("SHOW_DET_TEMP");
+                            string thisTemp = GlobalFunc.axUCONN21.Comm("SHOW_DET_TEMP");
                             thisTemp = thisTemp.Replace("DET_TEMP ", "");
                             GlobalFunc.det1_temp = GlobalFunc.Math45Pt1(Convert.ToDouble(thisTemp));
                         }
@@ -145,7 +150,6 @@ namespace LCMS
                             retry = true;
                             retryCount++;
                         }
-                        axUCONN21.Close();
                         retry = false;
                     }
                     catch (Exception ex)
@@ -166,23 +170,19 @@ namespace LCMS
             {
                 bool retry = true;
                 int retryCount = 0;
-                axUDROP1.SelIndex = 2;
                 while (retry)
                 {
                     try
                     {
-                        if (axUCONN21.IsOpen)
+                        if (GlobalFunc.axUCONN22.IsOpen)
                         {
-                            axUCONN21.Close();
+                            GlobalFunc.axUCONN22.Close();
                         }
 
-                        axUCONN21.Address = axUDROP1.SelAddress;
-                        axUCONN21.Open();
-                        axUCONN21.Comm("SHOW_VERSION");
-                        axUCONN21.Comm("ENAB_HV");
-                        if (axUCONN21.ID == 2)
+                        GlobalFunc.axUCONN22.Open();
+                        if (GlobalFunc.axUCONN22.ID == 2)
                         {
-                            string thisTemp = GlobalFunc.tc.axUCONN21.Comm("SHOW_DET_TEMP");
+                            string thisTemp = GlobalFunc.axUCONN22.Comm("SHOW_DET_TEMP");
                             thisTemp = thisTemp.Replace("DET_TEMP ", "");
                             GlobalFunc.det2_temp = GlobalFunc.Math45Pt1(Convert.ToDouble(thisTemp));
                             retry = false;
@@ -192,7 +192,6 @@ namespace LCMS
                             retry = true;
                             retryCount++;
                         }
-                        axUCONN21.Close();
                     }
                     catch (Exception ex)
                     {
@@ -202,8 +201,8 @@ namespace LCMS
                     {
                         try
                         {
-                            axUDROP1.SelIndex = 1;
-                            axUCONN21.Address = axUDROP1.SelAddress;
+                            GlobalFunc.axUDROP2.SelIndex = 1;
+                            GlobalFunc.axUCONN22.Address = axUDROP1.SelAddress;
                         }
                         catch { }
                     }
@@ -223,38 +222,29 @@ namespace LCMS
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN21.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN21.Close();
                     }
-                    axUDROP1.SelIndex = 1;
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    if (axUCONN21.ID == 1)
+
+                    GlobalFunc.axUCONN21.Open();
+                    if (GlobalFunc.axUCONN21.ID == 1)
                     {
                         try
                         {
-                            //string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
-                            string thisICR = axUCONN21.Comm("SHOW_CRM");
+                            string thisICR = GlobalFunc.axUCONN21.Comm("SHOW_CRM");
                             thisICR = thisICR.Replace("CRM ", "");
                             GlobalFunc.det1_icr = Convert.ToDouble(thisICR);
                         }
                         catch (Exception ex)
                         { }
-
-                        GlobalFunc.axUDROP1 = new AxUMCBILib.AxUDROP();
-                        GlobalFunc.axUCONN21 = new AxUMCBILib.AxUCONN2();
-
-                        GlobalFunc.axUDROP1 = axUDROP1;
-                        GlobalFunc.axUCONN21 = axUCONN21;
-                        GlobalFunc.axUCONN21.Open();
                     }
                     else
                     {
                         retry = true;
                         retryCount++;
                     }
-                    axUCONN21.Close();
+                    //axUCONN21.Close();
                     retry = false;
                 }
                 catch (Exception ex)
@@ -272,39 +262,26 @@ namespace LCMS
         {
             bool retry = true;
             int retryCount = 0;
-            axUDROP1.SelIndex = 2;
+            //axUDROP1.SelIndex = 2;
             while (retry)
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN22.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN22.Close();
                     }
-
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    axUCONN21.Comm("SHOW_VERSION");
-                    axUCONN21.Comm("ENAB_HV");
-                    if (axUCONN21.ID == 2)
+                    GlobalFunc.axUCONN22.Open();
+                    if (GlobalFunc.axUCONN22.ID == 2)
                     {
                         try
                         {
-                            //string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
-                            string thisICR = axUCONN21.Comm("SHOW_CRM");
+                            string thisICR = GlobalFunc.axUCONN22.Comm("SHOW_CRM");
                             thisICR = thisICR.Replace("CRM ", "");
                             GlobalFunc.det2_icr = Convert.ToDouble(thisICR);
                         }
                         catch (Exception ex)
                         { }
-
-                        GlobalFunc.axUDROP2 = new AxUMCBILib.AxUDROP();
-                        GlobalFunc.axUCONN22 = new AxUMCBILib.AxUCONN2();
-
-                        GlobalFunc.axUDROP2 = axUDROP1;
-                        GlobalFunc.axUCONN22 = axUCONN21;
-                        GlobalFunc.axUCONN22.Open();
-
                         retry = false;
                     }
                     else
@@ -312,7 +289,6 @@ namespace LCMS
                         retry = true;
                         retryCount++;
                     }
-                    axUCONN21.Close();
                 }
                 catch (Exception ex)
                 {
@@ -320,8 +296,8 @@ namespace LCMS
                 }
                 if (retryCount == 5)
                 {
-                    axUDROP1.SelIndex = 1;
-                    axUCONN21.Address = axUDROP1.SelAddress;
+                    //axUDROP1.SelIndex = 1;
+                    //axUCONN21.Address = axUDROP1.SelAddress;
                 }
                 if (retryCount == 10)
                 {
@@ -338,16 +314,16 @@ namespace LCMS
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN21.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN21.Close();
                     }
-                    axUDROP1.SelIndex = 1;
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    if (axUCONN21.ID == 1)
+                    //axUDROP1.SelIndex = 1;
+                    //axUCONN21.Address = axUDROP1.SelAddress;
+                    GlobalFunc.axUCONN21.Open();
+                    if (GlobalFunc.axUCONN21.ID == 1)
                     {
-                        string thisActive = axUCONN21.Comm("SHOW_ACTIVE");
+                        string thisActive = GlobalFunc.axUCONN21.Comm("SHOW_ACTIVE");
                         if (thisActive.Contains("87"))
                         {
                             GlobalFunc.det1_active = false;
@@ -362,7 +338,7 @@ namespace LCMS
                         retry = true;
                         retryCount++;
                     }
-                    axUCONN21.Close();
+                    //axUCONN21.Close();
                     retry = false;
                 }
                 catch (Exception ex)
@@ -380,23 +356,20 @@ namespace LCMS
         {
             bool retry = true;
             int retryCount = 0;
-            axUDROP1.SelIndex = 2;
+            //axUDROP1.SelIndex = 2;
             while (retry)
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN22.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN22.Close();
                     }
 
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    axUCONN21.Comm("SHOW_VERSION");
-                    axUCONN21.Comm("ENAB_HV");
-                    if (axUCONN21.ID == 2)
+                    GlobalFunc.axUCONN22.Open();
+                    if (GlobalFunc.axUCONN22.ID == 2)
                     {
-                        string thisActive = GlobalFunc.tc.axUCONN21.Comm("SHOW_ACTIVE");
+                        string thisActive = GlobalFunc.axUCONN22.Comm("SHOW_ACTIVE");
                         if (thisActive.Contains("87"))
                         {
                             GlobalFunc.det2_active = false;
@@ -412,7 +385,7 @@ namespace LCMS
                         retry = true;
                         retryCount++;
                     }
-                    axUCONN21.Close();
+                    //axUCONN21.Close();
                 }
                 catch (Exception ex)
                 {
@@ -420,8 +393,8 @@ namespace LCMS
                 }
                 if (retryCount == 5)
                 {
-                    axUDROP1.SelIndex = 1;
-                    axUCONN21.Address = axUDROP1.SelAddress;
+                    GlobalFunc.axUDROP2.SelIndex = 1;
+                    GlobalFunc.axUCONN22.Address = axUDROP1.SelAddress;
                 }
                 if (retryCount == 10)
                 {
@@ -464,16 +437,16 @@ namespace LCMS
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN21.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN21.Close();
                     }
-                    axUDROP1.SelIndex = 1;
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    if (axUCONN21.ID == 1)
+                    //axUDROP1.SelIndex = 1;
+                    //axUCONN21.Address = axUDROP1.SelAddress;
+                    GlobalFunc.axUCONN21.Open();
+                    if (GlobalFunc.axUCONN21.ID == 1)
                     {
-                        string thisTemp = GlobalFunc.tc.axUCONN21.Comm("SHOW_DET_TEMP");
+                        string thisTemp = GlobalFunc.axUCONN21.Comm("SHOW_DET_TEMP");
                         thisTemp = thisTemp.Replace("DET_TEMP ", "");
                         GlobalFunc.det1_temp = GlobalFunc.Math45(Convert.ToDouble(thisTemp));
                     }
@@ -482,7 +455,7 @@ namespace LCMS
                         retry = true;
                         retryCount++;
                     }
-                    axUCONN21.Close();
+                    //axUCONN21.Close();
                     retry = false;
                 }
                 catch (Exception ex)
@@ -500,23 +473,20 @@ namespace LCMS
         {
             bool retry = true;
             int retryCount = 0;
-            axUDROP1.SelIndex = 2;
+            //axUDROP1.SelIndex = 2;
             while (retry)
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN22.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN22.Close();
                     }
 
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    axUCONN21.Comm("SHOW_VERSION");
-                    axUCONN21.Comm("ENAB_HV");
-                    if (axUCONN21.ID == 2)
+                    GlobalFunc.axUCONN22.Open();
+                    if (GlobalFunc.axUCONN22.ID == 2)
                     {
-                        string thisTemp = GlobalFunc.tc.axUCONN21.Comm("SHOW_DET_TEMP");
+                        string thisTemp = GlobalFunc.axUCONN21.Comm("SHOW_DET_TEMP");
                         thisTemp = thisTemp.Replace("DET_TEMP ", "");
                         GlobalFunc.det2_temp = GlobalFunc.Math45(Convert.ToDouble(thisTemp));
                         retry = false;
@@ -526,7 +496,7 @@ namespace LCMS
                         retry = true;
                         retryCount++;
                     }
-                    axUCONN21.Close();
+                    //axUCONN21.Close();
                 }
                 catch (Exception ex)
                 {
@@ -534,8 +504,8 @@ namespace LCMS
                 }
                 if (retryCount == 5)
                 {
-                    axUDROP1.SelIndex = 1;
-                    axUCONN21.Address = axUDROP1.SelAddress;
+                    GlobalFunc.axUDROP2.SelIndex = 1;
+                    GlobalFunc.axUCONN22.Address = axUDROP1.SelAddress;
                 }
                 if (retryCount == 10)
                 {
@@ -552,15 +522,12 @@ namespace LCMS
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN21.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN21.Close();
                     }
-                    axUDROP1.SelIndex = 1;
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    axUCONN21.Comm("SHOW_VERSION");
-                    axUCONN21.Comm("DISABLE_HV");
+                    GlobalFunc.axUCONN21.Open();
+                    GlobalFunc.axUCONN21.Comm("DISABLE_HV");
                     if (axUCONN21.ID == 1)
                     {
                         GlobalFunc.DetectorID1 = axUCONN21.ID;
@@ -573,7 +540,7 @@ namespace LCMS
                         retryCount++;
                         GlobalFunc.connectedToDetector1 = false;
                     }
-                    axUCONN21.Close();
+                    //axUCONN21.Close();
                 }
                 catch (Exception ex)
                 {
@@ -592,21 +559,18 @@ namespace LCMS
         {
             bool retry = true;
             int retryCount = 0;
-            axUDROP1.SelIndex = 2;
+            //axUDROP1.SelIndex = 2;
             while (retry)
             {
                 try
                 {
-                    if (axUCONN21.IsOpen)
+                    if (GlobalFunc.axUCONN22.IsOpen)
                     {
-                        axUCONN21.Close();
+                        GlobalFunc.axUCONN22.Close();
                     }
-
-                    axUCONN21.Address = axUDROP1.SelAddress;
-                    axUCONN21.Open();
-                    axUCONN21.Comm("SHOW_VERSION");
-                    axUCONN21.Comm("DISABLE_HV");
-                    if (axUCONN21.ID == 2)
+                    GlobalFunc.axUCONN22.Open();
+                    GlobalFunc.axUCONN22.Comm("DISABLE_HV");
+                    if (GlobalFunc.axUCONN22.ID == 2)
                     {
                         GlobalFunc.DetectorID1 = axUCONN21.ID;
                         GlobalFunc.connectedToDetector2 = true;
@@ -618,7 +582,7 @@ namespace LCMS
                         retryCount++;
                         GlobalFunc.connectedToDetector2 = false;
                     }
-                    axUCONN21.Close();
+                    //axUCONN21.Close();
                 }
                 catch (Exception ex)
                 {
@@ -629,8 +593,8 @@ namespace LCMS
                 {
                     try
                     {
-                        axUDROP1.SelIndex = 1;
-                        axUCONN21.Address = axUDROP1.SelAddress;
+                        GlobalFunc.axUDROP2.SelIndex = 1;
+                        GlobalFunc.axUCONN22.Address = axUDROP1.SelAddress;
                     }
                     catch
                     {
