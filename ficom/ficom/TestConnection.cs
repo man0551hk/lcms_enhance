@@ -234,7 +234,8 @@ namespace LCMS
                     {
                         try
                         {
-                            string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
+                            //string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
+                            string thisICR = axUCONN21.Comm("SHOW_CRM");
                             thisICR = thisICR.Replace("CRM ", "");
                             GlobalFunc.det1_icr = Convert.ToDouble(thisICR);
                         }
@@ -289,7 +290,8 @@ namespace LCMS
                     {
                         try
                         {
-                            string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
+                            //string thisICR = GlobalFunc.tc.axUCONN21.Comm("SHOW_CRM");
+                            string thisICR = axUCONN21.Comm("SHOW_CRM");
                             thisICR = thisICR.Replace("CRM ", "");
                             GlobalFunc.det2_icr = Convert.ToDouble(thisICR);
                         }
@@ -345,7 +347,7 @@ namespace LCMS
                     axUCONN21.Open();
                     if (axUCONN21.ID == 1)
                     {
-                        string thisActive = GlobalFunc.tc.axUCONN21.Comm("SHOW_ACTIVE");
+                        string thisActive = axUCONN21.Comm("SHOW_ACTIVE");
                         if (thisActive.Contains("87"))
                         {
                             GlobalFunc.det1_active = false;

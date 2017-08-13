@@ -60,8 +60,23 @@ namespace LCMS
         public void SendCommand(string command)
         {
             //OpenConnection(detectorIndex);
-            
-            //GlobalFunc.axUCONN21.Comm(command);
+
+            try
+            {
+                if (!GlobalFunc.axUCONN21.IsOpen)
+                {
+                    GlobalFunc.axUCONN21.Open();
+                }
+                GlobalFunc.axUCONN21.Comm(command);
+                if (GlobalFunc.axUCONN21.IsOpen)
+                {
+                    GlobalFunc.axUCONN21.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                GlobalFunc.logManager.WriteLog(ex.Message);
+            }
             //CloseConnection(detectorIndex);
         }
 
