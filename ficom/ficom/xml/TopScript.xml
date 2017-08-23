@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScriptSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <WarmUpBegin>JobFiles\Begin_Det1_warmup.Job</WarmUpBegin>
-  <WarmUpEnd>JobFiles\End_Det1_warmup.Job</WarmUpEnd>
+  <WarmUpBegin>JobFiles\Begin_Det1_Warmup.txt</WarmUpBegin>
+  <WarmUpEnd>JobFiles\End_Det1_Warmup.txt</WarmUpEnd>
   
   <WarmUpChn>C:\LCMS\Spectra\Det1_WarmUp.chn</WarmUpChn>
   <WarmUpData>C:\LCMS\Data\Det1_WarmUp.Dat</WarmUpData>

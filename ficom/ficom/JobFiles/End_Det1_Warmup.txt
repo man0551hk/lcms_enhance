@@ -1,0 +1,5 @@
+﻿SAVE "C:\LCMS\SPECTRA\DET1_Warmup.Chn"
+WAIT 5
+REPORT "C:\LCMS\Data\DET1_Warmup.Dat"
+WAIT 5
+QUIT
