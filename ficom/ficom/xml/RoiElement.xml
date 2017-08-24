@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfRoiElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RoiElement>
+    <id>1</id>
+    <peak>365.5</peak>
+    <start>220</start>
+    <end>268</end>
+  </RoiElement>
+  <RoiElement>
+    <id>2</id>
+    <peak>497.1</peak>
+    <start>298</start>
+    <end>358</end>
+  </RoiElement>
+  <RoiElement>
+    <id>3</id>
+    <peak>661.7</peak>
+    <start>390</start>
+    <end>470</end>
+  </RoiElement>
+  <RoiElement>
+    <id>4</id>
+    <peak>795.9</peak>
+    <start>486</start>
+    <end>546</end>
+  </RoiElement>
+  <RoiElement>
+    <id>5</id>
+    <peak>1461</peak>
+    <start>850</start>
+    <end>950</end>
+  </RoiElement>
+</ArrayOfRoiElement>

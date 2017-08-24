@@ -1,0 +1,35 @@
+
+Detector #1      ACQ 24-Jun-2017 at  9:50:33   RT = 120.3   LT = 120.0
+            DigiBASE
+            Detector 1 Background
+
+ROI # 1     RANGE: 220 = 304.42keV  to  268 = 386.06keV
+            AREA : Gross =  8301    Net = 216   +/- 241
+            CENTROID: 230.36  = 322.04keV
+            SHAPE: FWHM = 3.82     FW(1/5)M = 11.43
+            No close library match.
+
+ROI # 2     RANGE: 298 = 437.09keV  to  358 = 539.14keV
+            AREA : Gross =  5524    Net = 227   +/- 220
+            CENTROID: 314.00  = 464.30keV
+            SHAPE: FWHM = 1.70     FW(1/5)M = 2.72
+            No close library match.
+
+ROI # 3     RANGE: 390 = 593.57keV  to  470 = 729.63keV
+            AREA : Gross =  4597    Net = -290   +/- 246
+            CENTROID: 397.60  = 606.50keV
+            SHAPE: FWHM = 4.33     FW(1/5)M = 18.10
+            ID: CS-134 at 604.66keV
+            Corrected Rate = 0.00 +/- 2.10 cA
+
+ROI # 4     RANGE: 486 = 756.85keV  to  546 = 858.90keV
+            AREA : Gross =  2411    Net = 62   +/- 146
+            CENTROID: 538.00  = 845.29keV
+            SHAPE: FWHM = 1.70     FW(1/5)M = 2.72
+            No close library match.
+
+ROI # 5     RANGE: 850 = 1375.96keV  to  950 = 1546.04keV
+            AREA : Gross =  4456    Net = 3412   +/- 141
+            CENTROID: 904.24  = 1468.20keV
+            SHAPE: FWHM = 57.02     FW(1/5)M = 96.29
+            No close library match.

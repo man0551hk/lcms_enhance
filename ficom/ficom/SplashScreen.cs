@@ -91,6 +91,7 @@ namespace LCMS
                 textReader4.Close();
                 countTime += 50;
 
+                GlobalFunc.LoadRoiElement();
                 GlobalFunc.LoadIsotopXML();
 
                 if (GlobalFunc.basicSetting.InsalledIO.ToLower() == "true")

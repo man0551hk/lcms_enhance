@@ -1,0 +1,35 @@
+
+Detector #1      ACQ 24-Jun-2017 at  9:29:42   RT = 300.8   LT = 300.0
+            DigiBASE
+            Detector 1 Warmup
+
+ROI # 1     RANGE: 220 = 304.42keV  to  268 = 386.06keV
+            AREA : Gross =  20806    Net = -3   +/- 386
+            CENTROID: 228.95  = 319.64keV
+            SHAPE: FWHM = 1.91     FW(1/5)M = 3.05
+            No close library match.
+
+ROI # 2     RANGE: 298 = 437.09keV  to  358 = 539.14keV
+            AREA : Gross =  13574    Net = 500   +/- 346
+            CENTROID: 316.94  = 469.31keV
+            SHAPE: FWHM = 2.89     FW(1/5)M = 7.21
+            No close library match.
+
+ROI # 3     RANGE: 390 = 593.57keV  to  470 = 729.63keV
+            AREA : Gross =  11795    Net = -2340   +/- 417
+            CENTROID: 397.00  = 605.47keV
+            SHAPE: FWHM = 1.70     FW(1/5)M = 2.72
+            ID: CS-134 at 604.66keV
+            Corrected Rate = 0.00 +/- 1.42 cA
+
+ROI # 4     RANGE: 486 = 756.85keV  to  546 = 858.90keV
+            AREA : Gross =  6180    Net = 151   +/- 235
+            CENTROID: 499.90  = 780.49keV
+            SHAPE: FWHM = 1.81     FW(1/5)M = 2.90
+            No close library match.
+
+ROI # 5     RANGE: 850 = 1375.96keV  to  950 = 1546.04keV
+            AREA : Gross =  11047    Net = 7950   +/- 238
+            CENTROID: 903.52  = 1466.99keV
+            SHAPE: FWHM = 60.72     FW(1/5)M = 92.40
+            No close library match.

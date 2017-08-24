@@ -1,0 +1,34 @@
+
+Detector #2      ACQ 10-Mar-2017 at 15:14:56   RT = 6.1   LT = 6.0
+            Spare
+            Detector 2 Calibration
+
+ROI # 1     RANGE: 220 = 304.53keV  to  268 = 386.15keV
+            AREA : Gross =  616    Net = -5   +/- 66
+            CENTROID: 231.91  = 324.79keV
+            SHAPE: FWHM = 34.31     FW(1/5)M = 35.52
+            No close library match.
+
+ROI # 2     RANGE: 298 = 437.16keV  to  358 = 539.18keV
+            AREA : Gross =  487    Net = -72   +/- 71
+            CENTROID: 337.18  = 503.78keV
+            SHAPE: FWHM = 2.19     FW(1/5)M = 3.84
+            No close library match.
+
+ROI # 3     RANGE: 390 = 593.59keV  to  470 = 729.61keV
+            AREA : Gross =  416    Net = -219   +/- 87
+            CENTROID: 400.00  = 610.59keV
+            SHAPE: FWHM = 105.42     FW(1/5)M = 106.44
+            No close library match.
+
+ROI # 4     RANGE: 486 = 756.82keV  to  546 = 858.84keV
+            AREA : Gross =  202    Net = 60   +/- 36
+            CENTROID: 511.50  = 800.18keV
+            SHAPE: FWHM = 4.04     FW(1/5)M = 7.99
+            No close library match.
+
+ROI # 5     RANGE: 850 = 1375.73keV  to  950 = 1545.77keV
+            AREA : Gross =  272    Net = 154   +/- 44
+            CENTROID: 897.27  = 1456.11keV
+            SHAPE: FWHM = 24.18     FW(1/5)M = 35.20
+            No close library match.

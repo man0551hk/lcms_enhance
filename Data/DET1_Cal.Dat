@@ -1,0 +1,39 @@
+
+Detector #1      ACQ 10-Mar-2017 at 14:37:32   RT = 6.1   LT = 6.0
+            Device_14288687
+            Detector 1 Calibration
+
+ROI # 1     RANGE: 220 = 301.79keV  to  268 = 382.21keV
+            AREA : Gross =  701    Net = 56   +/- 68
+            CENTROID: 262.28  = 372.63keV
+            SHAPE: FWHM = 2.46     FW(1/5)M = 4.20
+            ID: J-131 at 364.49keV
+            Corrected Rate = 11.42 +/- 13.87 cA
+
+ROI # 2     RANGE: 298 = 432.47keV  to  358 = 532.99keV
+            AREA : Gross =  555    Net = -25   +/- 72
+            CENTROID: 310.00  = 452.57keV
+            SHAPE: FWHM = 1.68     FW(1/5)M = 2.68
+            ID: Ru-103 at 497.08keV
+            Corrected Rate = 0.00 +/- 13.19 cA
+
+ROI # 3     RANGE: 390 = 586.59keV  to  470 = 720.62keV
+            AREA : Gross =  479    Net = -48   +/- 80
+            CENTROID: 414.88  = 628.28keV
+            SHAPE: FWHM = 2.26     FW(1/5)M = 5.96
+            ID: Cs-137 at 661.66keV
+            Corrected Rate = 0.00 +/- 15.67 cA
+
+ROI # 4     RANGE: 486 = 747.42keV  to  546 = 847.94keV
+            AREA : Gross =  233    Net = -1   +/- 46
+            CENTROID: 489.00  = 752.45keV
+            SHAPE: FWHM = 52.14     FW(1/5)M = 53.27
+            ID: Cs-134 at 795.86keV
+            Corrected Rate = 0.00 +/- 8.96 cA
+
+ROI # 5     RANGE: 850 = 1357.23keV  to  950 = 1524.76keV
+            AREA : Gross =  302    Net = 83   +/- 59
+            CENTROID: 915.59  = 1467.11keV
+            SHAPE: FWHM = 3.62     FW(1/5)M = 10.35
+            ID: K-40 at 1461.00keV
+            Corrected Rate = 129.65 +/- 92.16 cA
